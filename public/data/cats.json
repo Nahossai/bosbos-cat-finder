@@ -1,0 +1,63 @@
+{
+  "updated_at": "2026-11-15T15:20:51.735042",
+  "total_candidates": 2,
+  "target_criteria": {
+    "name": "Bosbos",
+    "sex": "Female",
+    "max_age_weeks": 20,
+    "preferred_palette": "Bright White, Cream, Colorpoints, Light Calico/Pastel"
+  },
+  "cats": [
+    {
+      "id": "cochrane_mariposa",
+      "name": "Mariposa",
+      "shelter": "Cochrane & Area Humane Society",
+      "shelter_location": "Cochrane, AB (West Calgary commuter area)",
+      "shelter_phone": "(403) 932-2072",
+      "sex": "Female",
+      "age_str": "2 Months",
+      "age_weeks": 8.7,
+      "breed": "DMH",
+      "personality": "Available for Adoption",
+      "image_url": "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af795384af4b141fd7fba05_eac35480-b228-449a-a83c-4fe5b4938d39.png",
+      "bio": "Mariposa is a lovely DMH kitten currently looking for a forever home at Cochrane Humane Society.",
+      "adoption_url": "https://www.cochranehumane.ca/animals/mariposa",
+      "bosbos_score": 60,
+      "color_category": "Standard",
+      "cute_tags": [],
+      "first_seen": "2026-11-15T15:20:51.735042",
+      "last_seen": "2026-11-15T15:20:51.735042",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0
+    },
+    {
+      "id": "meow_14597",
+      "name": "Toaster",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "18 weeks",
+      "age_weeks": 18.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14597",
+      "bio": "*I am in a Foster Home. Meet Toaster she\u2019s a gentle, easygoing girl who enjoys the simple things in life. She loves curling up for a cozy cuddle, but she\u2019s always happy to have a little playtime too! Littermates: Microwave, Kettle, Oven, Refrigerator",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/",
+      "bosbos_score": 53,
+      "color_category": "Standard",
+      "cute_tags": [
+        "little",
+        "cozy",
+        "gentle",
+        "cuddle"
+      ],
+      "first_seen": "2026-11-15T15:20:51.735042",
+      "last_seen": "2026-11-15T15:20:51.735042",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0
+    }
+  ]
+}

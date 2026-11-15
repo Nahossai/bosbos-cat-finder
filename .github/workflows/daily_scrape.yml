@@ -1,0 +1,52 @@
+name: Calgary Cat Scraper & Firebase Deploy
+
+on:
+  schedule:
+    # Runs twice a day at 8:00 AM and 5:00 PM Calgary MST (15:00 and 00:00 UTC)
+    - cron: '0 0,15 * * *'
+  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Calgary Adoption Scrapers
+        run: |
+          python scrape_and_update.py
+
+      - name: Commit & Push Updated Adoption Data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/ public/data/
+          git diff --staged --quiet || (git commit -m "chore(data): automated twice-daily kitten shortlist update [skip ci]" && git push)
+
+      - name: Deploy to Firebase Hosting (if secret configured)
+        if: env.FIREBASE_SERVICE_ACCOUNT != ''
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          channelId: live
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}

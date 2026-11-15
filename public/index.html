@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bosbos Kitten Finder 🐾 Calgary Daily Adoption Shortlist</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐱</text></svg>">
+  
+  <!-- Firebase SDKs for Realtime Community Likes -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Header -->
+    <header class="hero">
+      <div class="hero-badge">🐾 Calgary Kitten Search • December 2026 Target</div>
+      <h1>Finding <span>Bosbos</span></h1>
+      <p>
+        Daily automated shortlist of female kittens (&le; 20 weeks) with bright/white colors and cute features across Calgary Humane Society, MEOW Foundation, and regional rescues.
+      </p>
+
+      <div class="stats-bar">
+        <div class="stat-pill">Total Candidates: <strong id="total-cats-count">0</strong></div>
+        <div class="stat-pill">New Today: <strong id="new-today-count">0</strong></div>
+        <div class="stat-pill">Shelters Monitored: <strong>3+ Live</strong></div>
+        <div class="stat-pill">Updated: <strong id="last-updated">Just now</strong></div>
+      </div>
+    </header>
+
+    <!-- Social Action Bar -->
+    <div class="actions-bar">
+      <div>
+        <strong style="color: #0f172a; font-size: 15px;">👥 Friend Voting Active</strong>
+        <p style="color: #64748b; font-size: 13px; margin-top: 2px;">Share this dashboard with friends so they can vote for the cutest kitten!</p>
+      </div>
+      <button class="btn-share" id="share-btn">
+        <span>🔗</span> Share Link with Friends
+      </button>
+    </div>
+
+    <!-- Filter & Sort Controls -->
+    <section class="controls-card">
+      <div class="filter-row">
+        <input type="text" id="search-input" class="search-input" placeholder="🔍 Search by kitten name, shelter, breed, or personality..." />
+        <select id="sort-select" class="sort-select">
+          <option value="most_liked">🔥 Most Liked by Friends</option>
+          <option value="score">🎯 Bosbos Match Score (High to Low)</option>
+          <option value="youngest">🍼 Youngest Age First</option>
+          <option value="newest">✨ Newly Added First</option>
+        </select>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-tab="all">All Matches</button>
+        <button class="tab-btn" data-tab="liked">❤️ Liked by Friends</button>
+        <button class="tab-btn" data-tab="favorites">⭐ My Favorites</button>
+        <button class="tab-btn" data-tab="new">🌟 New Today</button>
+        <button class="tab-btn" data-tab="white">🤍 White / Cream Palette</button>
+      </div>
+
+      <div class="slider-container">
+        <label for="age-slider">Max Age: <strong id="age-val" style="color: #f43f5e;">20 wks</strong></label>
+        <input type="range" id="age-slider" class="age-slider" min="6" max="20" step="1" value="20" />
+      </div>
+    </section>
+
+    <!-- Kitten Cards Grid -->
+    <main class="cats-grid" id="cats-grid">
+      <!-- Dynamically populated via app.js -->
+    </main>
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <h2 id="modal-title" style="margin-bottom: 16px; font-size: 1.4rem; color: #0f172a;"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

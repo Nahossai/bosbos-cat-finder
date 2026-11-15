@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T21:24:25.817242",
+  "updated_at": "2026-11-15T21:25:55.333964",
   "total_candidates": 10,
   "target_criteria": {
     "name": "Bosbos",
@@ -29,13 +29,13 @@
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
         "gentle",
+        "loving",
         "little",
-        "affectionate",
         "sweet",
-        "loving"
+        "affectionate"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -62,11 +62,11 @@
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
         "playful",
-        "sweet",
-        "little"
+        "little",
+        "sweet"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -92,13 +92,13 @@
       "bosbos_score": 68,
       "color_category": "Standard",
       "cute_tags": [
-        "loving",
+        "adorable",
         "playful",
-        "little",
-        "adorable"
+        "loving",
+        "little"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -124,15 +124,15 @@
       "bosbos_score": 66,
       "color_category": "Standard",
       "cute_tags": [
+        "sweetest",
+        "little",
+        "sweet",
         "gentle",
         "playful",
-        "sweetest",
-        "cuddle",
-        "sweet",
         "soft"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -160,15 +160,15 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "gentle",
+        "adorable",
         "purr",
-        "sweet",
-        "purring",
         "little",
-        "adorable"
+        "sweet",
+        "gentle",
+        "purring"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -197,13 +197,13 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
+        "adorable",
         "loving",
-        "sweet",
         "little",
-        "adorable"
+        "sweet"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -231,12 +231,12 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
-        "purr",
         "soft",
+        "purr",
         "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -262,13 +262,13 @@
       "bosbos_score": 53,
       "color_category": "Standard",
       "cute_tags": [
-        "cozy",
+        "little",
         "gentle",
-        "cuddle",
-        "little"
+        "cozy",
+        "cuddle"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -295,7 +295,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -322,7 +322,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T21:24:25.803642",
+      "last_seen": "2026-11-15T21:25:55.325049",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,

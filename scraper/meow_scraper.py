@@ -2,14 +2,31 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import logging
+from concurrent.futures import ThreadPoolExecutor
 
 logger = logging.getLogger(__name__)
 
 MEOW_URL = "https://meowfoundation.com/adoptable-cats/"
 
+def _get_extra_photos_for_cat(cat_id, base_img):
+    photos = [base_img] if base_img else []
+    if not cat_id:
+        return photos
+    for seq in range(2, 5):
+        url = f"https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid={cat_id}&seq={seq}"
+        try:
+            r = requests.get(url, timeout=3)
+            if r.status_code == 200 and r.content != b"NOPIC" and len(r.content) > 100:
+                photos.append(url)
+            else:
+                break
+        except Exception:
+            break
+    return photos
+
 def scrape_meow_cats():
     """
-    Scrapes adoptable cats from MEOW Foundation.
+    Scrapes adoptable cats from MEOW Foundation including multiple images.
     Returns a list of standardized cat dictionaries.
     """
     cats = []
@@ -36,17 +53,23 @@ def scrape_meow_cats():
             details_el = b.select_one(".cat-details p")
             details_text = details_el.get_text(separator=" ", strip=True) if details_el else ""
             
+            bio_el = b.select_one(".cat-bio")
+            bio = bio_el.get_text(separator=" ", strip=True) if bio_el else ""
+            
+            # Check if adopted
+            if "adopted" in name.lower() or "has been adopted" in bio.lower():
+                logger.info(f"Skipping adopted cat: {name}")
+                continue
+                
             sex_match = re.search(r"Sex:\s*([A-Za-z]+)", details_text)
             sex = sex_match.group(1).strip() if sex_match else "Unknown"
             
             age_match = re.search(r"Age:\s*([^.]+)", details_text)
             age = age_match.group(1).strip() if age_match else "Unknown"
             
-            bio_el = b.select_one(".cat-bio")
-            bio = bio_el.get_text(separator=" ", strip=True) if bio_el else ""
-            
             cats.append({
                 "id": f"meow_{cat_id}" if cat_id else f"meow_{name.lower().replace(' ', '_')}",
+                "raw_id": cat_id,
                 "name": name,
                 "shelter": "MEOW Foundation",
                 "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
@@ -56,10 +79,23 @@ def scrape_meow_cats():
                 "breed": "Domestic Shorthair / Rescue Mix",
                 "personality": personality,
                 "image_url": img_url,
+                "images": [img_url] if img_url else [],
+                "photos_count": 1 if img_url else 0,
                 "bio": bio,
                 "adoption_url": MEOW_URL,
                 "source_type": "Cat-Only Rescue Shelter"
             })
+            
+        # Probe extra pictures in parallel for kittens / candidates
+        def fetch_extra(c):
+            if c.get("raw_id"):
+                c["images"] = _get_extra_photos_for_cat(c["raw_id"], c["image_url"])
+                c["photos_count"] = len(c["images"])
+            return c
+            
+        with ThreadPoolExecutor(max_workers=8) as ex:
+            cats = list(ex.map(fetch_extra, cats))
+            
     except Exception as e:
         logger.error(f"Error scraping MEOW Foundation: {e}")
         

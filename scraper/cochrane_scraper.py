@@ -9,7 +9,8 @@ COCHRANE_URL = "https://www.cochranehumane.ca/adopt"
 
 def scrape_cochrane_cats():
     """
-    Scrapes adoptable cats from Cochrane & Area Humane Society.
+    Scrapes adoptable cats from Cochrane & Area Humane Society including all gallery photos.
+    Filters out cats already adopted.
     Returns a list of standardized cat dictionaries.
     """
     cats = []
@@ -31,16 +32,18 @@ def scrape_cochrane_cats():
             name_el = item.find(["h2", "h3", "h4"])
             name = name_el.get_text(strip=True) if name_el else "Unknown"
             
-            # Clean up name if it has "Adopted" status
-            is_adopted = "I've Been Adopted" in name or "Adopted" in text
-            name_clean = re.sub(r"-\s*I've Been Adopted.*", "", name).strip()
-            
-            # If already adopted, we can skip or mark as adopted
+            # Filter out cats that are already adopted
+            is_adopted = any(k in name.lower() or k in text.lower() for k in [
+                "i've been adopted", "ive been adopted", "adopted! 🥳", "status: adopted"
+            ])
             if is_adopted:
+                logger.info(f"Skipping adopted cat: {name}")
                 continue
                 
+            name_clean = re.sub(r"-\s*I've Been Adopted.*", "", name, flags=re.I).strip()
+            
             img_el = item.find("img")
-            img_url = img_el.get("src") if img_el else ""
+            base_img = img_el.get("src") if img_el else ""
             
             link_el = item.find("a", href=True)
             link = link_el["href"] if link_el else COCHRANE_URL
@@ -56,6 +59,40 @@ def scrape_cochrane_cats():
             breed_match = re.search(r"Breed:\s*([A-Za-z\s]+?)(?:Age:|$)", text)
             breed = breed_match.group(1).strip() if breed_match else "Domestic Shorthair"
             
+            # Photos collection
+            photos = []
+            if base_img:
+                photos.append(base_img)
+                
+            bio = f"{name_clean} is a lovely {breed} kitten currently looking for a forever home at Cochrane Humane Society."
+            
+            # Fetch detail page for all gallery photos
+            if link and link != COCHRANE_URL:
+                try:
+                    d_resp = requests.get(link, headers=headers, timeout=8)
+                    if d_resp.status_code == 200:
+                        d_soup = BeautifulSoup(d_resp.text, "html.parser")
+                        gallery_imgs = d_soup.select(".product-header3_gallery img, .product7_image-wrapper img, .product-header3_main-image-wrapper img")
+                        for g_img in gallery_imgs:
+                            src = g_img.get("src")
+                            if src and "website-files" in src and not any(k in src.lower() for k in ["logo", "icon", "paw", "vector", "footer", "adopted"]):
+                                if src not in photos:
+                                    photos.append(src)
+                                    
+                        # Also check if bio paragraphs exist
+                        bio_p = d_soup.select(".product-header3_description p, .rich-text p")
+                        if bio_p:
+                            bio_texts = [p.get_text(separator=" ", strip=True) for p in bio_p if p.get_text(strip=True)]
+                            if bio_texts:
+                                bio = " ".join(bio_texts)
+                except Exception as de:
+                    logger.warning(f"Could not fetch Cochrane detail page for {name_clean}: {de}")
+                    
+            if not photos and base_img:
+                photos = [base_img]
+                
+            primary_image = photos[0] if photos else ""
+            
             cats.append({
                 "id": f"cochrane_{name_clean.lower().replace(' ', '_')}",
                 "name": name_clean,
@@ -66,8 +103,10 @@ def scrape_cochrane_cats():
                 "age_str": age,
                 "breed": breed,
                 "personality": "Available for Adoption",
-                "image_url": img_url,
-                "bio": f"{name_clean} is a lovely {breed} kitten currently looking for a forever home at Cochrane Humane Society.",
+                "image_url": primary_image,
+                "images": photos,
+                "photos_count": len(photos),
+                "bio": bio,
                 "adoption_url": link,
                 "source_type": "Humane Society"
             })

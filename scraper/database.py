@@ -23,6 +23,7 @@ def init_db(db_path=DB_PATH):
             breed TEXT,
             personality TEXT,
             image_url TEXT,
+            images TEXT,
             bio TEXT,
             adoption_url TEXT,
             bosbos_score INTEGER,
@@ -35,24 +36,37 @@ def init_db(db_path=DB_PATH):
             likes_count INTEGER DEFAULT 0
         )
     """)
+    
+    # Check if images column exists (migration)
+    cur.execute("PRAGMA table_info(cats)")
+    cols = [col[1] for col in cur.fetchall()]
+    if "images" not in cols:
+        cur.execute("ALTER TABLE cats ADD COLUMN images TEXT")
+        
     conn.commit()
     return conn
 
-def save_and_update_cats(matched_cats, db_path=DB_PATH, json_path=JSON_PATH):
+def save_and_update_cats(matched_cats, all_raw_cats=None, db_path=DB_PATH, json_path=JSON_PATH):
     """
     Inserts or updates matched cats in SQLite, tracks first_seen vs new_today,
-    and exports a sorted JSON file for the web frontend.
+    marks no-longer-available or adopted cats as 'adopted' (removing them from active list),
+    and exports a sorted JSON file with all image arrays for the web frontend.
     """
     conn = init_db(db_path)
     cur = conn.cursor()
     now_iso = datetime.utcnow().isoformat()
     today_str = datetime.utcnow().strftime("%Y-%m-%d")
     
-    seen_ids = set()
+    matched_ids = set()
     
     for cat in matched_cats:
         cat_id = cat["id"]
-        seen_ids.add(cat_id)
+        matched_ids.add(cat_id)
+        
+        # Ensure images list
+        photos = cat.get("images") or ([cat.get("image_url")] if cat.get("image_url") else [])
+        primary_img = photos[0] if photos else cat.get("image_url", "")
+        photos_json = json.dumps(photos)
         
         # Check if already in db
         cur.execute("SELECT first_seen, likes_count FROM cats WHERE id = ?", (cat_id,))
@@ -66,14 +80,14 @@ def save_and_update_cats(matched_cats, db_path=DB_PATH, json_path=JSON_PATH):
                 UPDATE cats SET
                     name = ?, shelter = ?, shelter_location = ?, shelter_phone = ?,
                     sex = ?, age_str = ?, age_weeks = ?, breed = ?, personality = ?,
-                    image_url = ?, bio = ?, adoption_url = ?, bosbos_score = ?,
+                    image_url = ?, images = ?, bio = ?, adoption_url = ?, bosbos_score = ?,
                     color_category = ?, cute_tags = ?, last_seen = ?, is_new_today = ?,
                     status = 'active'
                 WHERE id = ?
             """, (
                 cat["name"], cat["shelter"], cat.get("shelter_location", ""), cat.get("shelter_phone", ""),
                 cat["sex"], cat["age_str"], cat.get("age_weeks"), cat.get("breed", ""), cat.get("personality", ""),
-                cat.get("image_url", ""), cat.get("bio", ""), cat.get("adoption_url", ""), cat.get("bosbos_score", 0),
+                primary_img, photos_json, cat.get("bio", ""), cat.get("adoption_url", ""), cat.get("bosbos_score", 0),
                 cat.get("color_category", ""), json.dumps(cat.get("cute_tags", [])), now_iso, is_new,
                 cat_id
             ))
@@ -82,28 +96,41 @@ def save_and_update_cats(matched_cats, db_path=DB_PATH, json_path=JSON_PATH):
                 INSERT INTO cats (
                     id, name, shelter, shelter_location, shelter_phone,
                     sex, age_str, age_weeks, breed, personality,
-                    image_url, bio, adoption_url, bosbos_score,
+                    image_url, images, bio, adoption_url, bosbos_score,
                     color_category, cute_tags, first_seen, last_seen,
                     is_new_today, status, likes_count
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, 'active', 0)
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, 'active', 0)
             """, (
                 cat_id, cat["name"], cat["shelter"], cat.get("shelter_location", ""), cat.get("shelter_phone", ""),
                 cat["sex"], cat["age_str"], cat.get("age_weeks"), cat.get("breed", ""), cat.get("personality", ""),
-                cat.get("image_url", ""), cat.get("bio", ""), cat.get("adoption_url", ""), cat.get("bosbos_score", 0),
+                primary_img, photos_json, cat.get("bio", ""), cat.get("adoption_url", ""), cat.get("bosbos_score", 0),
                 cat.get("color_category", ""), json.dumps(cat.get("cute_tags", [])), now_iso, now_iso
             ))
             
-    # Mark cats not seen in this scrape as adopted/removed
-    if seen_ids:
-        placeholders = ",".join(["?"] * len(seen_ids))
-        cur.execute(f"UPDATE cats SET status = 'adopted' WHERE id NOT IN ({placeholders}) AND status = 'active'", list(seen_ids))
+    # Mark cats from scraped shelters that are NO LONGER available as 'adopted'
+    source_pool = all_raw_cats if all_raw_cats is not None else matched_cats
+    scraped_shelters = set(c["shelter"] for c in source_pool if c.get("shelter"))
+    all_raw_active_ids = set(c["id"] for c in source_pool if c.get("id"))
+    
+    for shelter_name in scraped_shelters:
+        # If any active cat previously saved under this shelter is no longer present in all_raw_active_ids, it was adopted!
+        cur.execute("SELECT id FROM cats WHERE shelter = ? AND status = 'active'", (shelter_name,))
+        stored_active = [r[0] for r in cur.fetchall()]
+        for st_id in stored_active:
+            if st_id not in all_raw_active_ids:
+                cur.execute("UPDATE cats SET status = 'adopted' WHERE id = ?", (st_id,))
+                
+    # Also ensure any cat not in matched_ids is not marked active if it stopped matching
+    if matched_ids:
+        placeholders = ",".join(["?"] * len(matched_ids))
+        cur.execute(f"UPDATE cats SET status = 'adopted' WHERE id NOT IN ({placeholders}) AND status = 'active'", list(matched_ids))
         
     conn.commit()
     
-    # Query all active matched cats ordered by bosbos_score DESC
+    # Query ONLY active cats ordered by bosbos_score DESC
     cur.execute("""
         SELECT id, name, shelter, shelter_location, shelter_phone, sex, age_str, age_weeks,
-               breed, personality, image_url, bio, adoption_url, bosbos_score, color_category,
+               breed, personality, image_url, images, bio, adoption_url, bosbos_score, color_category,
                cute_tags, first_seen, last_seen, is_new_today, status, likes_count
         FROM cats
         WHERE status = 'active'
@@ -113,7 +140,7 @@ def save_and_update_cats(matched_cats, db_path=DB_PATH, json_path=JSON_PATH):
     
     columns = [
         "id", "name", "shelter", "shelter_location", "shelter_phone", "sex", "age_str", "age_weeks",
-        "breed", "personality", "image_url", "bio", "adoption_url", "bosbos_score", "color_category",
+        "breed", "personality", "image_url", "images", "bio", "adoption_url", "bosbos_score", "color_category",
         "cute_tags", "first_seen", "last_seen", "is_new_today", "status", "likes_count"
     ]
     
@@ -122,6 +149,17 @@ def save_and_update_cats(matched_cats, db_path=DB_PATH, json_path=JSON_PATH):
         d = dict(zip(columns, r))
         d["cute_tags"] = json.loads(d["cute_tags"]) if d["cute_tags"] else []
         d["is_new_today"] = bool(d["is_new_today"])
+        
+        # Parse images list
+        try:
+            d["images"] = json.loads(d["images"]) if d["images"] else []
+        except Exception:
+            d["images"] = []
+            
+        if not d["images"] and d["image_url"]:
+            d["images"] = [d["image_url"]]
+            
+        d["photos_count"] = len(d["images"])
         export_list.append(d)
         
     conn.close()

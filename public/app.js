@@ -8,6 +8,13 @@ let selectedShelter = "all";
 let maxAge = 20;
 let searchQuery = "";
 
+// Map to track current photo index for each cat (catId -> index)
+const catPhotoIndices = {};
+
+// Touch tracking for finger swipe navigation
+const touchStartX = {};
+const touchStartY = {};
+
 // Initialize App
 document.addEventListener("DOMContentLoaded", async () => {
   initFirebase();
@@ -43,8 +50,17 @@ async function loadCats() {
   try {
     const res = await fetch("data/cats.json?t=" + Date.now());
     const data = await res.json();
-    allCats = data.cats || [];
     
+    // Strict adoption removal: only keep cats that are active and available
+    allCats = (data.cats || []).filter(c => !c.status || c.status === "active");
+    
+    // Initialize photo indices
+    allCats.forEach(c => {
+      if (!(c.id in catPhotoIndices)) {
+        catPhotoIndices[c.id] = 0;
+      }
+    });
+
     // Seed initial likes from local storage if Firebase is absent
     const savedLocalLikes = JSON.parse(localStorage.getItem("bosbos_community_likes") || "{}");
     globalLikes = { ...savedLocalLikes };
@@ -74,7 +90,6 @@ function populateShelterDropdown() {
   if (!shelterEl) return;
   
   const shelters = Array.from(new Set(allCats.map(c => c.shelter).filter(Boolean)));
-  // Ensure default standard shelters are in list
   ["MEOW Foundation", "Calgary Humane Society", "Cochrane & Area Humane Society"].forEach(s => {
     if (!shelters.includes(s)) shelters.push(s);
   });
@@ -149,6 +164,104 @@ function setupEventListeners() {
   }
 }
 
+// Photo Navigation & Swipe Handlers
+function getCatPhotos(cat) {
+  if (cat.images && Array.isArray(cat.images) && cat.images.length > 0) {
+    return cat.images;
+  }
+  return [cat.image_url || 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80'];
+}
+
+function changePhoto(catId, delta, e) {
+  if (e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+  const cat = allCats.find(c => c.id === catId);
+  if (!cat) return;
+  
+  const photos = getCatPhotos(cat);
+  if (photos.length <= 1) return;
+  
+  let currentIdx = catPhotoIndices[catId] || 0;
+  currentIdx = (currentIdx + delta + photos.length) % photos.length;
+  catPhotoIndices[catId] = currentIdx;
+  
+  updateCardPhotoDisplay(cat, currentIdx, photos);
+}
+
+function setPhoto(catId, targetIdx, e) {
+  if (e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+  const cat = allCats.find(c => c.id === catId);
+  if (!cat) return;
+  
+  const photos = getCatPhotos(cat);
+  if (targetIdx < 0 || targetIdx >= photos.length) return;
+  
+  catPhotoIndices[catId] = targetIdx;
+  updateCardPhotoDisplay(cat, targetIdx, photos);
+}
+
+function updateCardPhotoDisplay(cat, currentIdx, photos) {
+  const card = document.getElementById(`card-${cat.id}`);
+  if (!card) return;
+  
+  const imgEl = card.querySelector(".card-image");
+  if (imgEl) {
+    imgEl.src = photos[currentIdx];
+  }
+  
+  const counterEl = document.getElementById(`counter-${cat.id}`);
+  if (counterEl) {
+    counterEl.textContent = `${currentIdx + 1} / ${photos.length}`;
+  }
+  
+  // Update dots
+  const dots = card.querySelectorAll(".carousel-dot");
+  dots.forEach((dot, idx) => {
+    if (idx === currentIdx) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
+  });
+}
+
+// Touch swipe handlers
+function onTouchStart(catId, e) {
+  if (e.touches && e.touches.length > 0) {
+    touchStartX[catId] = e.touches[0].clientX;
+    touchStartY[catId] = e.touches[0].clientY;
+  }
+}
+
+function onTouchEnd(catId, e) {
+  if (!touchStartX[catId]) return;
+  
+  const touchEndX = e.changedTouches[0].clientX;
+  const touchEndY = e.changedTouches[0].clientY;
+  
+  const deltaX = touchEndX - touchStartX[catId];
+  const deltaY = touchEndY - touchStartY[catId];
+  
+  // If horizontal swipe is dominant and exceeds threshold (35px)
+  if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 35) {
+    if (deltaX < 0) {
+      // Swipe Left -> Next Photo
+      changePhoto(catId, 1, e);
+    } else {
+      // Swipe Right -> Prev Photo
+      changePhoto(catId, -1, e);
+    }
+  }
+  
+  delete touchStartX[catId];
+  delete touchStartY[catId];
+}
+
 function toggleLike(catId) {
   const isCurrentlyFav = localFavorites.includes(catId);
   const currentLikes = globalLikes[catId] || 0;
@@ -192,10 +305,31 @@ function openModal(cat) {
   const modalTitle = document.getElementById("modal-title");
   const modalBody = document.getElementById("modal-body");
   
+  const photos = getCatPhotos(cat);
+  let modalPhotoIdx = catPhotoIndices[cat.id] || 0;
+  
+  const renderModalGallery = () => {
+    return `
+      <div style="position: relative; width: 100%; height: 280px; border-radius: 14px; overflow: hidden; background: #f1f5f9; margin-bottom: 16px;">
+        <img id="modal-img-${cat.id}" src="${photos[modalPhotoIdx]}" alt="${cat.name}" style="width: 100%; height: 100%; object-fit: cover;" />
+        <div class="badge-photo-count">
+          <span>📷</span> <span id="modal-counter-${cat.id}">${modalPhotoIdx + 1} / ${photos.length}</span>
+        </div>
+        ${photos.length > 1 ? `
+          <button class="carousel-btn carousel-prev" onclick="changeModalPhoto('${cat.id}', -1)">‹</button>
+          <button class="carousel-btn carousel-next" onclick="changeModalPhoto('${cat.id}', 1)">›</button>
+          <div class="carousel-dots" style="bottom: 12px; left: 16px;">
+            ${photos.map((_, i) => `<span class="carousel-dot ${i === modalPhotoIdx ? 'active' : ''}" onclick="setModalPhoto('${cat.id}', ${i})"></span>`).join("")}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  };
+
   modalTitle.textContent = `${cat.name} — ${cat.shelter}`;
   modalBody.innerHTML = `
+    ${renderModalGallery()}
     <div style="display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
-      <img src="${cat.image_url}" alt="${cat.name}" style="width: 160px; height: 160px; object-fit: cover; border-radius: 14px;" />
       <div style="flex: 1; min-width: 200px;">
         <p style="margin-bottom: 6px;"><strong>Age:</strong> ${cat.age_str} (~${cat.age_weeks} weeks)</p>
         <p style="margin-bottom: 6px;"><strong>Sex:</strong> ${cat.sex}</p>
@@ -217,12 +351,48 @@ function openModal(cat) {
   modalOverlay.classList.add("active");
 }
 
+window.changeModalPhoto = function(catId, delta) {
+  const cat = allCats.find(c => c.id === catId);
+  if (!cat) return;
+  const photos = getCatPhotos(cat);
+  let cur = catPhotoIndices[catId] || 0;
+  cur = (cur + delta + photos.length) % photos.length;
+  catPhotoIndices[catId] = cur;
+  
+  const mImg = document.getElementById(`modal-img-${catId}`);
+  if (mImg) mImg.src = photos[cur];
+  const mCounter = document.getElementById(`modal-counter-${catId}`);
+  if (mCounter) mCounter.textContent = `${cur + 1} / ${photos.length}`;
+  
+  // also sync card
+  updateCardPhotoDisplay(cat, cur, photos);
+};
+
+window.setModalPhoto = function(catId, targetIdx) {
+  const cat = allCats.find(c => c.id === catId);
+  if (!cat) return;
+  const photos = getCatPhotos(cat);
+  if (targetIdx < 0 || targetIdx >= photos.length) return;
+  catPhotoIndices[catId] = targetIdx;
+  
+  const mImg = document.getElementById(`modal-img-${catId}`);
+  if (mImg) mImg.src = photos[targetIdx];
+  const mCounter = document.getElementById(`modal-counter-${catId}`);
+  if (mCounter) mCounter.textContent = `${targetIdx + 1} / ${photos.length}`;
+  
+  // also sync card
+  updateCardPhotoDisplay(cat, targetIdx, photos);
+};
+
 function render() {
   const gridEl = document.getElementById("cats-grid");
   if (!gridEl) return;
 
   // 1. Filter
   let filtered = allCats.filter(cat => {
+    // Strict adoption removal
+    if (cat.status && cat.status !== "active") return false;
+
     // Shelter filter
     if (selectedShelter !== "all" && cat.shelter !== selectedShelter) {
       return false;
@@ -284,17 +454,56 @@ function render() {
   gridEl.innerHTML = filtered.map(cat => {
     const likesCount = globalLikes[cat.id] || 0;
     const isLiked = localFavorites.includes(cat.id);
+    const photos = getCatPhotos(cat);
+    const curPhotoIdx = catPhotoIndices[cat.id] || 0;
+    const currentPhotoUrl = photos[curPhotoIdx] || photos[0];
+    const hasMultiplePhotos = photos.length > 1;
+
     const cuteTagsHtml = (cat.cute_tags || [])
       .map(tag => `<span class="cute-tag">✨ ${tag}</span>`)
       .join("");
 
     return `
       <div class="cat-card" id="card-${cat.id}">
-        <div class="card-image-wrap">
-          <img class="card-image" src="${cat.image_url || 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80'}" alt="${cat.name}" loading="lazy" />
+        <!-- Image with Touch Swipe and Photo Counter -->
+        <div class="card-image-wrap" 
+             ontouchstart="onTouchStart('${cat.id}', event)" 
+             ontouchend="onTouchEnd('${cat.id}', event)">
+          
+          <img class="card-image" src="${currentPhotoUrl}" alt="${cat.name}" loading="lazy" />
+          
           ${cat.is_new_today ? '<span class="badge-new">NEW TODAY</span>' : ''}
           <span class="badge-score">⭐ ${cat.bosbos_score}% Match</span>
+          
+          <!-- Photo Counter Badge -->
+          <div class="badge-photo-count">
+            <span>📷</span>
+            <span id="counter-${cat.id}">
+              ${hasMultiplePhotos ? `${curPhotoIdx + 1} / ${photos.length}` : '1 photo'}
+            </span>
+          </div>
+
+          <!-- Carousel Controls if multiple pictures -->
+          ${hasMultiplePhotos ? `
+            <button class="carousel-btn carousel-prev" 
+                    title="Previous photo" 
+                    onclick="changePhoto('${cat.id}', -1, event)">‹</button>
+            <button class="carousel-btn carousel-next" 
+                    title="Next photo" 
+                    onclick="changePhoto('${cat.id}', 1, event)">›</button>
+            
+            <div class="carousel-dots">
+              ${photos.map((_, i) => `
+                <span class="carousel-dot ${i === curPhotoIdx ? 'active' : ''}" 
+                      onclick="setPhoto('${cat.id}', ${i}, event)" 
+                      title="Photo ${i + 1}"></span>
+              `).join("")}
+            </div>
+
+            <div class="swipe-hint">👈 Swipe for more photos 👉</div>
+          ` : ''}
         </div>
+
         <div class="card-content">
           <div class="card-header-row">
             <h2 class="cat-name">${cat.name}</h2>
@@ -311,7 +520,7 @@ function render() {
           <p class="cat-bio">${cat.bio || 'Gentle and affectionate kitten available for adoption in Calgary.'}</p>
           <div class="cute-tags">${cuteTagsHtml}</div>
           <div class="card-actions">
-            <button class="btn-details" onclick='openModal(${JSON.stringify(cat).replace(/'/g, "&apos;")})'>Details</button>
+            <button class="btn-details" onclick='openModal(${JSON.stringify(cat).replace(/'/g, "&apos;")})'>Details (${photos.length} 📷)</button>
             <a href="${cat.adoption_url}" target="_blank" rel="noopener noreferrer" class="btn-adopt">Meet / Apply →</a>
           </div>
         </div>

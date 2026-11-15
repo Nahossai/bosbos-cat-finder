@@ -9,8 +9,8 @@ CHS_URL = "https://www.calgaryhumane.ca/adopt/cats/"
 
 def scrape_chs_cats():
     """
-    Scrapes adoptable cats from Calgary Humane Society.
-    Returns a list of standardized cat dictionaries.
+    Scrapes adoptable cats from Calgary Humane Society including all photos from detail pages.
+    Returns a list of standardized cat dictionaries with multiple images.
     """
     cats = []
     headers = {
@@ -28,7 +28,7 @@ def scrape_chs_cats():
             name = name_el.get_text(strip=True) if name_el else "Unknown"
             
             img_el = item.select_one("img.pp_heroimage")
-            img_url = img_el.get("src", "") if img_el else ""
+            base_img = img_el.get("src", "") if img_el else ""
             
             link_el = item.select_one("a[href^='?id=']")
             animal_id = link_el.get("href", "").replace("?id=", "") if link_el else ""
@@ -54,8 +54,37 @@ def scrape_chs_cats():
             breed_match = re.search(r"Breed:\s*([^<]+)", item_text)
             breed = breed_match.group(1).strip() if breed_match else "Domestic Shorthair"
             
-            # Calgary Humane Society bio
+            # Photos collection
+            photos = []
+            if base_img:
+                photos.append(base_img)
+                
             bio = ""
+            
+            # Fetch detail page for multiple photos and full bio
+            if animal_id:
+                try:
+                    d_resp = requests.get(detail_url, headers=headers, timeout=8)
+                    if d_resp.status_code == 200:
+                        d_soup = BeautifulSoup(d_resp.text, "html.parser")
+                        
+                        # Extract all photos in photosection
+                        detail_imgs = [img.get("src") for img in d_soup.select("#pp_photosection img, .pp_photodiv img") if img.get("src")]
+                        for d_img in detail_imgs:
+                            if d_img not in photos:
+                                photos.append(d_img)
+                                
+                        # Extract rich bio from memo
+                        memo_el = d_soup.select_one("#pp_memo")
+                        if memo_el:
+                            bio = memo_el.get_text(separator=" ", strip=True)
+                except Exception as de:
+                    logger.warning(f"Could not fetch CHS detail page for {name} ({animal_id}): {de}")
+                    
+            if not photos and base_img:
+                photos = [base_img]
+                
+            primary_image = photos[0] if photos else ""
             
             cats.append({
                 "id": f"chs_{animal_id}" if animal_id else f"chs_{name.lower().replace(' ', '_')}",
@@ -67,7 +96,9 @@ def scrape_chs_cats():
                 "age_str": age,
                 "breed": breed,
                 "personality": "Available for Adoption",
-                "image_url": img_url,
+                "image_url": primary_image,
+                "images": photos,
+                "photos_count": len(photos),
                 "bio": bio,
                 "adoption_url": detail_url,
                 "source_type": "Humane Society Shelter"

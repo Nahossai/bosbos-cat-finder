@@ -51,7 +51,7 @@ def run_pipeline():
     bosbos_candidates.sort(key=lambda c: (-c["bosbos_score"], c.get("age_weeks", 99)))
     
     # 3. Save to database and export JSON
-    saved_cats = save_and_update_cats(bosbos_candidates)
+    saved_cats = save_and_update_cats(bosbos_candidates, all_raw_cats=all_raw_cats)
     logger.info(f"Saved {len(saved_cats)} active candidates to database and public/data/cats.json.")
     
     # 4. Print clean summary table

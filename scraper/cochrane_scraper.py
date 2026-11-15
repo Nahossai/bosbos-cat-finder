@@ -72,12 +72,16 @@ def scrape_cochrane_cats():
                     d_resp = requests.get(link, headers=headers, timeout=8)
                     if d_resp.status_code == 200:
                         d_soup = BeautifulSoup(d_resp.text, "html.parser")
-                        gallery_imgs = d_soup.select(".product-header3_gallery img, .product7_image-wrapper img, .product-header3_main-image-wrapper img")
-                        for g_img in gallery_imgs:
-                            src = g_img.get("src")
-                            if src and "website-files" in src and not any(k in src.lower() for k in ["logo", "icon", "paw", "vector", "footer", "adopted"]):
-                                if src not in photos:
-                                    photos.append(src)
+                        # Strictly scope image search to this animal's own profile header
+                        # Never scrape .product7_image-wrapper which contains other shelter animals/dogs
+                        header_sec = d_soup.select_one(".section_product-header3, .product-header3_component")
+                        if header_sec:
+                            for g_img in header_sec.find_all("img"):
+                                src = g_img.get("src")
+                                if src and "website-files" in src:
+                                    if not any(k in src.lower() for k in ["logo", "icon", "paw", "vector", "svg", "footer", "adopted", "sponsor"]):
+                                        if src not in photos:
+                                            photos.append(src)
                                     
                         # Also check if bio paragraphs exist
                         bio_p = d_soup.select(".product-header3_description p, .rich-text p")

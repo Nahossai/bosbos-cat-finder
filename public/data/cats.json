@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T20:07:23.366916",
+  "updated_at": "2026-11-15T20:10:37.263911",
   "total_candidates": 5,
   "target_criteria": {
     "name": "Bosbos",
@@ -28,14 +28,14 @@
       "bosbos_score": 96,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "gentle",
         "loving",
-        "sweet",
         "little",
-        "affectionate"
+        "sweet",
+        "affectionate",
+        "gentle"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T20:07:23.366916",
+      "last_seen": "2026-11-15T20:10:37.263911",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -66,7 +66,7 @@
         "little"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T20:07:23.366916",
+      "last_seen": "2026-11-15T20:10:37.263911",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -92,15 +92,15 @@
       "bosbos_score": 66,
       "color_category": "Standard",
       "cute_tags": [
-        "gentle",
-        "sweet",
+        "soft",
+        "sweetest",
         "little",
+        "sweet",
         "playful",
-        "cuddle",
-        "sweetest"
+        "gentle"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T20:07:23.366916",
+      "last_seen": "2026-11-15T20:10:37.263911",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -119,10 +119,7 @@
       "personality": "Available for Adoption",
       "image_url": "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af795384af4b141fd7fba05_eac35480-b228-449a-a83c-4fe5b4938d39.png",
       "images": [
-        "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af795384af4b141fd7fba05_eac35480-b228-449a-a83c-4fe5b4938d39.png",
-        "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af8b0a11e8a2fdb6ce06980_4696562b-8666-4a86-b245-f8fbfcb6f6ba.jpg",
-        "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af8afca72f986bd3882a1c1_496c818c-3c40-450a-8c12-b7c3495b41a5.jpg",
-        "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af8ae371e8a2fdb6ce015cf_08fda498-c889-4ab8-a01b-c0265fb74923.jpg"
+        "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af795384af4b141fd7fba05_eac35480-b228-449a-a83c-4fe5b4938d39.png"
       ],
       "bio": "Mariposa is a lovely DMH kitten currently looking for a forever home at Cochrane Humane Society.",
       "adoption_url": "https://www.cochranehumane.ca/animals/mariposa",
@@ -130,11 +127,11 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T20:07:23.366916",
+      "last_seen": "2026-11-15T20:10:37.263911",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
-      "photos_count": 4
+      "photos_count": 1
     },
     {
       "id": "meow_14597",
@@ -156,13 +153,13 @@
       "bosbos_score": 53,
       "color_category": "Standard",
       "cute_tags": [
+        "little",
         "cozy",
         "gentle",
-        "little",
         "cuddle"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T20:07:23.366916",
+      "last_seen": "2026-11-15T20:10:37.263911",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,

@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-15T15:20:51.735042",
-  "total_candidates": 2,
+  "updated_at": "2026-11-15T16:09:31.920920",
+  "total_candidates": 5,
   "target_criteria": {
     "name": "Bosbos",
     "sex": "Female",
@@ -8,6 +8,92 @@
     "preferred_palette": "Bright White, Cream, Colorpoints, Light Calico/Pastel"
   },
   "cats": [
+    {
+      "id": "meow_14645",
+      "name": "Little Bit",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "12 weeks",
+      "age_weeks": 12.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14645",
+      "bio": "*I am in a foster home. Meet Little Bit, a striking almost all-white kitten  except for a \u201clittle bit\u201d of a dark streak on her forehead. She may be the smallest of her litter, but she has the biggest heart! Little Bit is the perfect balance of a sweet, gentle companion and an enthusiastic playmate. When she is in a quiet mood, she loves nothing more than to curl up next to you. But when it's playtime, her fun-loving side completely takes over! Her absolute favorite things in the world are plastic spring toys. Watch her bat them across the floor, chase them around corners, and pounce with pure kitten delight If you are looking for a gentle, affectionate companion who will also keep you endlessly entertained with her goofy spring-chasing antics, Little Bit is ready to bounce right into your life and forever home. Littermates: Radioactive, Binary, Bulldozer, Packer",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/",
+      "bosbos_score": 96,
+      "color_category": "Bright White / Cream / Point",
+      "cute_tags": [
+        "affectionate",
+        "little",
+        "sweet",
+        "gentle",
+        "loving"
+      ],
+      "first_seen": "2026-11-15T16:09:31.920920",
+      "last_seen": "2026-11-15T16:09:31.920920",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0
+    },
+    {
+      "id": "meow_14647",
+      "name": "Radioactive",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "12 weeks",
+      "age_weeks": 12.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14647",
+      "bio": "*I am in a foster home. Do not worry-this sweet little girl isn't hazardous, but she is guaranteed to completely contaminate your heart with love! Radioactive is incredibly bright and playful. This kitten gets her unique name from her incredibly cool markings: she is pure white except for three perfectly placed black spots on her forehead that look just like a radiation symbol; making her a literal one-of-a-kind masterpiece! If you are looking for a hands-on companion, look no further, as Radioactive takes her job as Household Supervisor very seriously. She loves to \"help\" you scoop the litter box by closely monitoring your technique, and she is an expert laundry consultant who happily pounces on warm sheets while you try to fold. You can actually see the intelligence shining behind her bright eyes that radiate curiosity as she is always investigating new sights and sounds. Radioactive is fully charged, brimming with love, and ready to bring her bright atomic energy to a family of her very own. Littermates: Little Bit, Binary, Bulldozer, Packer",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/",
+      "bosbos_score": 92,
+      "color_category": "Bright White / Cream / Point",
+      "cute_tags": [
+        "playful",
+        "little",
+        "sweet"
+      ],
+      "first_seen": "2026-11-15T16:09:31.920920",
+      "last_seen": "2026-11-15T16:09:31.920920",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0
+    },
+    {
+      "id": "meow_14648",
+      "name": "Packer",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "12 weeks",
+      "age_weeks": 12.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14648",
+      "bio": "*I am in a foster home. Meet Packer: a gorgeous little mini-panther who perfectly balances a confident playful spirit with a sweet, gentle side. Packer absolutely loves wand toys and will leap, chase, and stalk them with expert precision. She can usually be found wrestling and tumbling with her siblings. She has a fantastic playful energy and sweet nature. Packer is looking for a patient human who understands there\u2019s a time to cuddle and a time to play and she gets to choose. She isn't a kitty you can force into your lap, but when she decides it is cuddle time, it makes the moment feel incredibly special. Packer will melt your heart with the sweetest, softest meow you have ever heard! If you have a patient heart and are ready to earn the love of a truly special girl, Packer will reward you with her soft meows, choosing-you cuddles, and a lifetime of devotion. Littermates: Little Bit, Radioactive, Binary, Bulldozer",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/",
+      "bosbos_score": 66,
+      "color_category": "Standard",
+      "cute_tags": [
+        "little",
+        "sweet",
+        "gentle",
+        "cuddle",
+        "playful",
+        "soft"
+      ],
+      "first_seen": "2026-11-15T16:09:31.920920",
+      "last_seen": "2026-11-15T16:09:31.920920",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0
+    },
     {
       "id": "cochrane_mariposa",
       "name": "Mariposa",
@@ -26,7 +112,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T15:20:51.735042",
+      "last_seen": "2026-11-15T16:09:31.920920",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0
@@ -48,13 +134,13 @@
       "bosbos_score": 53,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
+        "cuddle",
         "cozy",
-        "gentle",
-        "cuddle"
+        "little",
+        "gentle"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T15:20:51.735042",
+      "last_seen": "2026-11-15T16:09:31.920920",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T19:51:38.510164",
+  "updated_at": "2026-11-15T20:07:23.366916",
   "total_candidates": 5,
   "target_criteria": {
     "name": "Bosbos",
@@ -28,14 +28,14 @@
       "bosbos_score": 96,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "little",
         "gentle",
-        "affectionate",
         "loving",
-        "sweet"
+        "sweet",
+        "little",
+        "affectionate"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T19:51:38.510164",
+      "last_seen": "2026-11-15T20:07:23.366916",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -61,12 +61,12 @@
       "bosbos_score": 92,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "little",
         "playful",
-        "sweet"
+        "sweet",
+        "little"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T19:51:38.510164",
+      "last_seen": "2026-11-15T20:07:23.366916",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -92,15 +92,15 @@
       "bosbos_score": 66,
       "color_category": "Standard",
       "cute_tags": [
-        "soft",
-        "sweetest",
-        "cuddle",
+        "gentle",
+        "sweet",
         "little",
         "playful",
-        "gentle"
+        "cuddle",
+        "sweetest"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T19:51:38.510164",
+      "last_seen": "2026-11-15T20:07:23.366916",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -130,7 +130,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T19:51:38.510164",
+      "last_seen": "2026-11-15T20:07:23.366916",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -156,13 +156,13 @@
       "bosbos_score": 53,
       "color_category": "Standard",
       "cute_tags": [
-        "cuddle",
-        "little",
         "cozy",
-        "gentle"
+        "gentle",
+        "little",
+        "cuddle"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T19:51:38.510164",
+      "last_seen": "2026-11-15T20:07:23.366916",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,

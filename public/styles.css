@@ -244,7 +244,6 @@ body {
   box-shadow: var(--shadow);
   border: 1px solid #fed7aa;
   display: flex;
-  flex-col;
   flex-direction: column;
   transition: all 0.25s ease;
   position: relative;
@@ -607,6 +606,7 @@ body {
 }
 
 /* Quick Summary Table */
+/* Quick Summary Table */
 .table-card {
   background: #ffffff;
   border-radius: var(--radius);
@@ -614,22 +614,58 @@ body {
   box-shadow: var(--shadow);
   border: 1px solid #fed7aa;
   margin-bottom: 36px;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .table-card h2 {
   font-size: 1.4rem;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: #0f172a;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+.table-scroll-hint {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #9f1239;
+  background: #ffe4e6;
+  border: 1px solid #fecdd3;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 14px;
+  border: 1px solid #fecdd3;
+  background: #ffffff;
+}
+
+.table-responsive-wrapper::-webkit-scrollbar {
+  height: 7px;
+}
+.table-responsive-wrapper::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+.table-responsive-wrapper::-webkit-scrollbar-thumb {
+  background: #f43f5e;
+  border-radius: 4px;
+}
+
 .comparison-table {
   width: 100%;
+  min-width: 860px;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 13px;
   text-align: left;
 }
 
@@ -637,19 +673,66 @@ body {
   background: #fff1f2;
   color: #9f1239;
   font-weight: 700;
-  padding: 12px 14px;
+  padding: 12px 10px;
   border-bottom: 2px solid #fecdd3;
   white-space: nowrap;
 }
 
 .comparison-table td {
-  padding: 14px;
+  padding: 12px 10px;
   border-bottom: 1px solid #f1f5f9;
-  vertical-align: middle;
+  vertical-align: top;
+  line-height: 1.45;
 }
 
 .comparison-table tr:hover td {
   background: #fffbfb;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table th:nth-child(1),
+.comparison-table td:nth-child(1) {
+  width: 16%;
+  min-width: 140px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.comparison-table th:nth-child(2),
+.comparison-table td:nth-child(2) {
+  width: 10%;
+  min-width: 95px;
+  white-space: nowrap;
+}
+
+.comparison-table th:nth-child(3),
+.comparison-table td:nth-child(3) {
+  width: 25%;
+  min-width: 200px;
+  color: #334155;
+}
+
+.comparison-table th:nth-child(4),
+.comparison-table td:nth-child(4) {
+  width: 23%;
+  min-width: 190px;
+  color: #475569;
+}
+
+.comparison-table th:nth-child(5),
+.comparison-table td:nth-child(5) {
+  width: 11%;
+  min-width: 105px;
+  white-space: nowrap;
+}
+
+.comparison-table th:nth-child(6),
+.comparison-table td:nth-child(6) {
+  width: 15%;
+  min-width: 140px;
 }
 
 .fee-highlight {
@@ -685,8 +768,8 @@ body {
 /* Shelters Grid */
 .shelter-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 24px;
 }
 
 .shelter-card-item {
@@ -698,6 +781,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: all 0.25s ease;
+  min-width: 0;
 }
 
 .shelter-card-item:hover {
@@ -709,15 +793,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 12px;
   margin-bottom: 14px;
   padding-bottom: 12px;
   border-bottom: 1px solid #f1f5f9;
 }
 
+.shelter-header > div {
+  flex: 1;
+  min-width: 0;
+}
+
 .shelter-name {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 3px;
 }
 
 .shelter-badge-type {
@@ -728,6 +820,7 @@ body {
   padding: 4px 10px;
   border-radius: 9999px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .fees-box {
@@ -779,19 +872,24 @@ body {
   color: #334155;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
 
 .perks-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  line-height: 1.4;
+  position: relative;
+  padding-left: 22px;
+  line-height: 1.5;
+  color: #334155;
+  display: block;
 }
 
 .perk-check {
   color: #10b981;
   font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
 }
 
 .shelter-info-footer {
@@ -1028,13 +1126,19 @@ body {
 .perk-warn {
   color: #d97706;
   font-weight: 900;
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 13px;
 }
 
 .perk-na {
   color: #94a3b8;
   font-weight: 900;
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 13px;
 }
 
 .cost-summary-box {
@@ -1057,6 +1161,8 @@ body {
 .cost-row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
   font-size: 13px;
   color: #475569;
   margin-bottom: 4px;
@@ -1065,6 +1171,8 @@ body {
 .cost-total {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
   font-size: 14px;
   font-weight: 800;
   color: #0f172a;
@@ -1080,12 +1188,13 @@ body {
 .value-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   padding: 4px 10px;
   border-radius: 9999px;
-  font-size: 12px;
-  font-weight: 800;
-  margin-top: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-top: 4px;
+  line-height: 1.3;
 }
 
 .value-badge-top {
@@ -1109,7 +1218,7 @@ body {
 /* Best Picks Highlights Grid */
 .best-picks-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 20px;
   margin-bottom: 36px;
 }
@@ -1122,6 +1231,9 @@ body {
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .best-pick-card.featured {
@@ -1137,6 +1249,7 @@ body {
   padding: 4px 10px;
   border-radius: 9999px;
   margin-bottom: 10px;
+  width: fit-content;
 }
 
 .rank-gold {
@@ -1173,6 +1286,8 @@ body {
   padding: 10px 14px;
   margin-bottom: 12px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
@@ -1186,7 +1301,7 @@ body {
 /* Checklist Cards */
 .checklist-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
   gap: 16px;
   margin-top: 16px;
 }
@@ -1197,6 +1312,10 @@ body {
   border-radius: 14px;
   padding: 16px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
 }
 
 .checklist-card h4 {
@@ -1221,6 +1340,158 @@ body {
   font-size: 12px;
   margin-top: 6px;
   display: block;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Mobile Optimization
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .table-scroll-hint {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px 12px 48px;
+    overflow-x: hidden;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 7px 14px;
+    white-space: nowrap;
+  }
+
+  .hero h1,
+  .shelter-hero h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  .hero p,
+  .shelter-hero p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .table-card {
+    padding: 18px 14px;
+    border-radius: 16px;
+    margin-bottom: 28px;
+  }
+
+  .table-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .shelter-card-item {
+    padding: 18px;
+  }
+
+  .shelter-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .shelter-badge-type {
+    align-self: flex-start;
+  }
+
+  .shelter-name {
+    font-size: 1.25rem;
+  }
+
+  .best-pick-card {
+    padding: 18px;
+  }
+
+  .best-pick-title {
+    font-size: 1.2rem;
+  }
+
+  .best-pick-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .shelter-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .best-picks-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .checklist-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px 8px 40px;
+  }
+
+  .nav-bar {
+    padding: 10px 12px;
+  }
+
+  .nav-link {
+    font-size: 12.5px;
+    padding: 6px 12px;
+  }
+
+  .hero h1,
+  .shelter-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .table-card {
+    padding: 14px 10px;
+  }
+
+  .shelter-card-item {
+    padding: 14px;
+  }
+
+  .fees-box {
+    padding: 10px 12px;
+  }
+
+  .cost-summary-box {
+    padding: 12px;
+  }
+
+  .checklist-card {
+    padding: 14px;
+  }
 }
 
 

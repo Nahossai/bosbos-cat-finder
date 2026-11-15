@@ -232,11 +232,31 @@ async function loadCats() {
     const newEl = document.getElementById("new-today-count");
     if (newEl) newEl.textContent = newCount;
     
-    if (data.updated_at) {
-      const dt = new Date(data.updated_at);
+    if (data.updated_at || data.updated_at_calgary) {
       const updatedEl = document.getElementById("last-updated");
       if (updatedEl) {
-        updatedEl.textContent = dt.toLocaleDateString() + " " + dt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        if (data.updated_at_calgary) {
+          updatedEl.textContent = data.updated_at_calgary;
+          updatedEl.title = "Calgary Local Time (America/Edmonton)";
+        } else {
+          try {
+            const rawIso = String(data.updated_at);
+            const isoStr = (!rawIso.endsWith("Z") && !rawIso.includes("+")) ? rawIso + "Z" : rawIso;
+            const dt = new Date(isoStr);
+            updatedEl.textContent = dt.toLocaleString("en-US", {
+              timeZone: "America/Edmonton",
+              month: "short",
+              day: "numeric",
+              hour: "numeric",
+              minute: "2-digit",
+              hour12: true,
+              timeZoneName: "short"
+            });
+            updatedEl.title = "Calgary Local Time (America/Edmonton)";
+          } catch (e) {
+            updatedEl.textContent = String(data.updated_at);
+          }
+        }
       }
     }
     updateVotesCounter();

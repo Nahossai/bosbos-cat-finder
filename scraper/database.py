@@ -1,7 +1,7 @@
 import sqlite3
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 
 DB_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "bosbos.db")
 JSON_PATH = os.path.join(os.path.dirname(__file__), "..", "public", "data", "cats.json")
@@ -93,12 +93,31 @@ def export_to_json(db_path=DB_PATH, json_path=JSON_PATH):
         
     conn.close()
     
-    now_iso = datetime.utcnow().isoformat()
+    now = datetime.utcnow()
+    now_iso = str(now.isoformat())
+    
+    try:
+        import zoneinfo
+        calgary_tz = zoneinfo.ZoneInfo("America/Edmonton")
+        if isinstance(now, datetime) and getattr(now, "tzinfo", None) is None:
+            now_utc = now.replace(tzinfo=timezone.utc)
+            calgary_now = now_utc.astimezone(calgary_tz)
+            calgary_time_str = str(calgary_now.strftime("%b %d, %Y, %I:%M %p %Z"))
+        elif isinstance(now, datetime):
+            calgary_now = now.astimezone(calgary_tz)
+            calgary_time_str = str(calgary_now.strftime("%b %d, %Y, %I:%M %p %Z"))
+        else:
+            calgary_time_str = str(now_iso)
+    except Exception:
+        calgary_time_str = str(now_iso)
+
     # Export to JSON
     os.makedirs(os.path.dirname(json_path), exist_ok=True)
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump({
             "updated_at": now_iso,
+            "updated_at_calgary": calgary_time_str,
+            "timezone": "America/Edmonton",
             "total_candidates": len(export_list),
             "target_criteria": {
                 "name": "Bosbos",

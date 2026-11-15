@@ -1,12 +1,17 @@
 // Bosbos Cat Finder Frontend App
 let allCats = [];
 let localFavorites = JSON.parse(localStorage.getItem("bosbos_favorites") || "[]");
-let globalLikes = {};
+let globalLikes = JSON.parse(localStorage.getItem("bosbos_community_likes") || "{}");
+let catVoters = JSON.parse(localStorage.getItem("bosbos_cat_voters") || "{}");
 let activeTab = "all";
 let activeSort = "most_liked";
 let selectedShelter = "all";
 let maxAge = 20;
 let searchQuery = "";
+
+// Cloud synchronization endpoint (Free cloud store with real-time sync & zero setup)
+const CLOUD_SYNC_URL = "https://api.restful-api.dev/objects/ff808181a09d98f701a1e0ce608e33ed";
+let cloudSyncTimeout = null;
 
 // Map to track current photo index for each cat (catId -> index)
 const catPhotoIndices = {};
@@ -21,10 +26,165 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadCats();
   setupEventListeners();
   populateShelterDropdown();
+  updateMyPicksCount();
+  checkUrlParamsForVotes();
+  await syncFromCloud();
   render();
+  startCloudPolling();
 });
 
-// Firebase Setup (Realtime Database for Community Likes)
+// Cloud Synchronization
+async function syncFromCloud() {
+  try {
+    const res = await fetch(CLOUD_SYNC_URL, { cache: "no-store" });
+    if (!res.ok) return;
+    const json = await res.json();
+    if (json && json.data) {
+      const cloudLikes = json.data.likes || {};
+      const cloudVoters = json.data.voters || {};
+      let hasChanges = false;
+
+      // Merge community likes taking the maximum
+      Object.keys(cloudLikes).forEach(id => {
+        const cVal = Number(cloudLikes[id]) || 0;
+        const lVal = Number(globalLikes[id]) || 0;
+        if (cVal > lVal) {
+          globalLikes[id] = cVal;
+          hasChanges = true;
+        }
+      });
+
+      // Merge voters
+      Object.keys(cloudVoters).forEach(id => {
+        if (!catVoters[id]) catVoters[id] = [];
+        (cloudVoters[id] || []).forEach(name => {
+          if (!catVoters[id].includes(name)) {
+            catVoters[id].push(name);
+            hasChanges = true;
+          }
+        });
+      });
+
+      if (hasChanges) {
+        localStorage.setItem("bosbos_community_likes", JSON.stringify(globalLikes));
+        localStorage.setItem("bosbos_cat_voters", JSON.stringify(catVoters));
+        render();
+      }
+      updateVotesCounter();
+    }
+  } catch (err) {
+    console.warn("Cloud sync error (using local cache):", err);
+  }
+}
+
+function pushToCloud() {
+  updateVotesCounter();
+  if (cloudSyncTimeout) clearTimeout(cloudSyncTimeout);
+  cloudSyncTimeout = setTimeout(async () => {
+    try {
+      await fetch(CLOUD_SYNC_URL, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "bosbos_community_likes_store",
+          data: {
+            likes: globalLikes,
+            voters: catVoters,
+            lastUpdated: Date.now()
+          }
+        })
+      });
+    } catch (err) {
+      console.warn("Cloud push error:", err);
+    }
+
+    if (db) {
+      try {
+        db.ref("likes").set(globalLikes);
+      } catch (e) {}
+    }
+  }, 350);
+}
+
+function updateVotesCounter() {
+  const totalVotes = Object.values(globalLikes).reduce((sum, v) => sum + (Number(v) || 0), 0);
+  const syncPill = document.getElementById("sync-status-pill");
+  if (syncPill) {
+    syncPill.innerHTML = `🟢 Live Votes: <strong id="community-votes-count">${totalVotes}</strong>`;
+  }
+}
+
+function startCloudPolling() {
+  // Sync live votes every 10 seconds while the tab is active
+  setInterval(() => {
+    if (!document.hidden) {
+      syncFromCloud();
+    }
+  }, 10000);
+}
+
+// URL-based Pick Sharing & Import
+function checkUrlParamsForVotes() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const votesParam = params.get("votes") || params.get("picks") || params.get("likes");
+    const voterName = params.get("by") || params.get("friend") || params.get("from");
+
+    if (votesParam) {
+      const catIds = votesParam.split(",").map(id => id.trim()).filter(Boolean);
+      const importedCatNames = [];
+      let addedCount = 0;
+
+      catIds.forEach(id => {
+        const cat = allCats.find(c => c.id === id);
+        if (cat) {
+          importedCatNames.push(cat.name);
+          globalLikes[id] = (globalLikes[id] || 0) + 1;
+          addedCount++;
+
+          if (voterName) {
+            if (!catVoters[id]) catVoters[id] = [];
+            if (!catVoters[id].includes(voterName)) {
+              catVoters[id].push(voterName);
+            }
+          }
+        }
+      });
+
+      if (addedCount > 0) {
+        localStorage.setItem("bosbos_community_likes", JSON.stringify(globalLikes));
+        localStorage.setItem("bosbos_cat_voters", JSON.stringify(catVoters));
+
+        // Show welcome friend banner
+        const bannerEl = document.getElementById("friend-picks-banner");
+        if (bannerEl) {
+          const sender = voterName ? `<strong>${voterName}</strong>` : "A friend";
+          bannerEl.innerHTML = `
+            <div class="friend-banner-content">
+              <span class="friend-banner-icon">🎉</span>
+              <div>
+                <strong>Friend Votes Imported!</strong><br />
+                ${sender} shared their favorite picks: <strong>${importedCatNames.join(", ")}</strong>! Their votes have been added to the community total.
+              </div>
+            </div>
+            <button class="friend-banner-close" onclick="document.getElementById('friend-picks-banner').style.display='none'">×</button>
+          `;
+          bannerEl.style.display = "flex";
+        }
+
+        pushToCloud();
+
+        // Clean query params so refresh doesn't re-add
+        const cleanUrl = window.location.pathname;
+        window.history.replaceState({}, document.title, cleanUrl);
+      }
+    }
+  } catch (err) {
+    console.warn("Failed checking url votes:", err);
+  }
+}
+
+// Optional Firebase Realtime Database
 let db = null;
 function initFirebase() {
   try {
@@ -36,13 +196,16 @@ function initFirebase() {
       db.ref("likes").on("value", (snapshot) => {
         const val = snapshot.val();
         if (val) {
-          globalLikes = val;
+          Object.keys(val).forEach(k => {
+            globalLikes[k] = Math.max(globalLikes[k] || 0, val[k]);
+          });
+          updateVotesCounter();
           render();
         }
       });
     }
   } catch (err) {
-    console.warn("Firebase initialization skipped, using local likes:", err);
+    console.warn("Firebase initialization skipped, using cloud sync:", err);
   }
 }
 
@@ -61,10 +224,6 @@ async function loadCats() {
       }
     });
 
-    // Seed initial likes from local storage if Firebase is absent
-    const savedLocalLikes = JSON.parse(localStorage.getItem("bosbos_community_likes") || "{}");
-    globalLikes = { ...savedLocalLikes };
-    
     // Update stats bar
     const totalEl = document.getElementById("total-cats-count");
     if (totalEl) totalEl.textContent = allCats.length;
@@ -80,6 +239,7 @@ async function loadCats() {
         updatedEl.textContent = dt.toLocaleDateString() + " " + dt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
       }
     }
+    updateVotesCounter();
   } catch (err) {
     console.error("Failed to load cats data:", err);
   }
@@ -147,10 +307,15 @@ function setupEventListeners() {
     });
   }
 
-  // Share Button
+  // Share Buttons
   const shareBtn = document.getElementById("share-btn");
   if (shareBtn) {
-    shareBtn.addEventListener("click", shareWithFriends);
+    shareBtn.addEventListener("click", shareGeneralLink);
+  }
+
+  const sharePicksBtn = document.getElementById("share-picks-btn");
+  if (sharePicksBtn) {
+    sharePicksBtn.addEventListener("click", shareMyPicks);
   }
 
   // Modal Close
@@ -264,37 +429,96 @@ function onTouchEnd(catId, e) {
 
 function toggleLike(catId) {
   const isCurrentlyFav = localFavorites.includes(catId);
-  const currentLikes = globalLikes[catId] || 0;
-  
+  const currentLikes = Number(globalLikes[catId]) || 0;
+  let voterName = localStorage.getItem("bosbos_voter_name") || "";
+
   if (isCurrentlyFav) {
+    // Remove like
     localFavorites = localFavorites.filter(id => id !== catId);
     globalLikes[catId] = Math.max(0, currentLikes - 1);
+    if (voterName && catVoters[catId]) {
+      catVoters[catId] = catVoters[catId].filter(n => n !== voterName);
+    }
   } else {
+    // Add like
+    if (!voterName) {
+      const input = prompt("🐾 What is your name? (Your friend will see your name alongside the kittens you vote for!):", "");
+      if (input && input.trim()) {
+        voterName = input.trim();
+        localStorage.setItem("bosbos_voter_name", voterName);
+      }
+    }
+
     localFavorites.push(catId);
     globalLikes[catId] = currentLikes + 1;
+
+    if (voterName) {
+      if (!catVoters[catId]) catVoters[catId] = [];
+      if (!catVoters[catId].includes(voterName)) {
+        catVoters[catId].push(voterName);
+      }
+    }
   }
-  
+
   localStorage.setItem("bosbos_favorites", JSON.stringify(localFavorites));
   localStorage.setItem("bosbos_community_likes", JSON.stringify(globalLikes));
-  
-  if (db) {
-    db.ref("likes/" + catId).set(globalLikes[catId]);
-  }
-  
+  localStorage.setItem("bosbos_cat_voters", JSON.stringify(catVoters));
+
+  updateMyPicksCount();
+  pushToCloud();
   render();
 }
 
-function shareWithFriends() {
+function updateMyPicksCount() {
+  const countEl = document.getElementById("my-picks-count");
+  if (countEl) countEl.textContent = localFavorites.length;
+}
+
+function shareMyPicks() {
+  if (localFavorites.length === 0) {
+    alert("🐾 You haven't voted for any kittens yet!\n\nClick the heart (🤍) on any kittens you like first, then tap 'Send My Picks' to share them with your friend.");
+    return;
+  }
+
+  let voterName = localStorage.getItem("bosbos_voter_name") || "";
+  if (!voterName) {
+    const input = prompt("What is your name so your friend knows who these picks are from? (e.g. Sarah):", "");
+    if (input && input.trim()) {
+      voterName = input.trim();
+      localStorage.setItem("bosbos_voter_name", voterName);
+    }
+  }
+
+  const base = window.location.origin + window.location.pathname;
+  const shareUrl = `${base}?picks=${localFavorites.join(",")}${voterName ? `&by=${encodeURIComponent(voterName)}` : ''}`;
+
   const shareData = {
-    title: "Help me find Bosbos! 🐾",
-    text: "Hey! I'm planning to adopt a kitten named Bosbos in December. Check out the shortlisted kittens in Calgary and vote for your favorites!",
-    url: window.location.href
+    title: `My favorite kittens for Bosbos! 🐾`,
+    text: `Hey! I voted for ${localFavorites.length} kitten${localFavorites.length > 1 ? 's' : ''} on the Bosbos adoption shortlist. Check out my picks here: ${shareUrl}`,
+    url: shareUrl
   };
 
   if (navigator.share) {
     navigator.share(shareData).catch(() => {});
   } else {
-    navigator.clipboard.writeText(window.location.href).then(() => {
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      alert(`🎉 Link with your picks copied to clipboard!\n\nSend this link to your friend on WhatsApp, iMessage, or text so they can see all the kittens you voted for.`);
+    });
+  }
+}
+
+function shareGeneralLink() {
+  const base = window.location.origin + window.location.pathname;
+  const shareData = {
+    title: "Help me find Bosbos! 🐾",
+    text: "Hey! I'm planning to adopt a kitten named Bosbos in December. Check out the shortlisted kittens in Calgary and vote for your favorites!",
+    url: base
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(base).then(() => {
       alert("🐾 Link copied to clipboard! Share it with friends to vote on kittens.");
     });
   }
@@ -463,6 +687,11 @@ function render() {
       .map(tag => `<span class="cute-tag">✨ ${tag}</span>`)
       .join("");
 
+    const voters = catVoters[cat.id] || [];
+    const votersHtml = voters.length > 0
+      ? `<div class="voters-tag" title="Voted by ${voters.join(', ')}">👥 Liked by ${voters.slice(0, 3).join(", ")}${voters.length > 3 ? ` +${voters.length - 3}` : ''}</div>`
+      : '';
+
     return `
       <div class="cat-card" id="card-${cat.id}">
         <!-- Image with Touch Swipe and Photo Counter -->
@@ -506,7 +735,10 @@ function render() {
 
         <div class="card-content">
           <div class="card-header-row">
-            <h2 class="cat-name">${cat.name}</h2>
+            <div>
+              <h2 class="cat-name">${cat.name}</h2>
+              ${votersHtml}
+            </div>
             <button class="like-btn ${isLiked ? 'liked' : ''}" onclick="toggleLike('${cat.id}')" title="Vote for ${cat.name}">
               <span>${isLiked ? '❤️' : '🤍'}</span>
               <span id="likes-count-${cat.id}">${likesCount}</span>

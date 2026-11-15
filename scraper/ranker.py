@@ -21,14 +21,29 @@ def parse_age_to_weeks(age_str: str):
     Parses a string like '18 weeks', '2 Months', '4 months 3 days', '8 wks' into a float representing weeks.
     Returns None if cannot parse or age is unknown/adult.
     """
-    if not age_str:
+    if age_str is None:
         return None
     
-    text = age_str.lower().strip()
+    text = str(age_str).lower().strip()
+    if not text:
+        return None
+
+    # Reject negative ages (e.g. "-5 weeks", "-2 months", "-10 days")
+    # Allow ranges like "6-8 weeks" or "6 - 8 weeks"
+    range_cleaned = re.sub(r"\d+\s*-\s*\d+", "", text)
+    if re.search(r"-\s*\d+", range_cleaned):
+        return None
     
     # Check for years first - any year is > 20 weeks
     if "year" in text or "yr" in text:
         return 999.0
+
+    # Check for 4-digit past birth years (e.g. 1990..2025)
+    year_match = re.search(r"\b(\d{4})\b", text)
+    if year_match:
+        year = int(year_match.group(1))
+        if 1990 <= year <= 2025:
+            return 999.0
     
     total_weeks = 0.0
     found = False
@@ -80,8 +95,18 @@ def calculate_bosbos_score(cat: dict) -> dict:
     - cute_tags: list[str]
     - score_breakdown: dict
     """
-    sex = (cat.get("sex") or "").strip().lower()
-    if sex not in ["female", "f"]:
+    if not isinstance(cat, dict):
+        return {
+            "is_match": False,
+            "reason": "Invalid cat record",
+            "score": 0,
+            "age_weeks": None
+        }
+
+    raw_sex = str(cat.get("sex") or "").strip().lower()
+    is_male = bool(re.search(r"\bmale\b", raw_sex) or raw_sex == "m")
+    is_female = not is_male and bool("female" in raw_sex or raw_sex == "f" or re.search(r"\bf\b", raw_sex))
+    if not is_female:
         return {
             "is_match": False,
             "reason": f"Not female (sex: {cat.get('sex')})",
@@ -89,13 +114,15 @@ def calculate_bosbos_score(cat: dict) -> dict:
             "age_weeks": None
         }
         
-    age_str = cat.get("age") or cat.get("age_str") or ""
+    age_str = str(cat.get("age") or cat.get("age_str") or "")
     age_weeks = parse_age_to_weeks(age_str)
     
     # Hard filter: must be <= 20.5 weeks
     if age_weeks is None:
         # Check if labeled explicitly as kitten without age
-        if "kitten" in (cat.get("bio", "") + " " + cat.get("breed", "")).lower():
+        bio_text = str(cat.get("bio") or "")
+        breed_text = str(cat.get("breed") or "")
+        if "kitten" in (bio_text + " " + breed_text).lower():
             age_weeks = 12.0 # estimate standard kitten
         else:
             return {
@@ -128,10 +155,10 @@ def calculate_bosbos_score(cat: dict) -> dict:
         
     # --- 2. Color / Coat Score (Max 40 pts) ---
     search_text = " ".join([
-        cat.get("name", ""),
-        cat.get("breed", ""),
-        cat.get("colors", ""),
-        cat.get("bio", "")
+        str(cat.get("name") or ""),
+        str(cat.get("breed") or ""),
+        str(cat.get("colors") or ""),
+        str(cat.get("bio") or "")
     ]).lower()
     
     color_category = "Standard"

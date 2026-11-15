@@ -4,6 +4,7 @@ let localFavorites = JSON.parse(localStorage.getItem("bosbos_favorites") || "[]"
 let globalLikes = {};
 let activeTab = "all";
 let activeSort = "most_liked";
+let selectedShelter = "all";
 let maxAge = 20;
 let searchQuery = "";
 
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   initFirebase();
   await loadCats();
   setupEventListeners();
+  populateShelterDropdown();
   render();
 });
 
@@ -24,7 +26,6 @@ function initFirebase() {
         firebase.initializeApp(window.FIREBASE_CONFIG);
       }
       db = firebase.database();
-      // Listen to real-time likes
       db.ref("likes").on("value", (snapshot) => {
         const val = snapshot.val();
         if (val) {
@@ -49,17 +50,37 @@ async function loadCats() {
     globalLikes = { ...savedLocalLikes };
     
     // Update stats bar
-    document.getElementById("total-cats-count").textContent = allCats.length;
+    const totalEl = document.getElementById("total-cats-count");
+    if (totalEl) totalEl.textContent = allCats.length;
+    
     const newCount = allCats.filter(c => c.is_new_today).length;
-    document.getElementById("new-today-count").textContent = newCount;
+    const newEl = document.getElementById("new-today-count");
+    if (newEl) newEl.textContent = newCount;
     
     if (data.updated_at) {
       const dt = new Date(data.updated_at);
-      document.getElementById("last-updated").textContent = dt.toLocaleDateString() + " " + dt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      const updatedEl = document.getElementById("last-updated");
+      if (updatedEl) {
+        updatedEl.textContent = dt.toLocaleDateString() + " " + dt.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+      }
     }
   } catch (err) {
     console.error("Failed to load cats data:", err);
   }
+}
+
+function populateShelterDropdown() {
+  const shelterEl = document.getElementById("shelter-select");
+  if (!shelterEl) return;
+  
+  const shelters = Array.from(new Set(allCats.map(c => c.shelter).filter(Boolean)));
+  // Ensure default standard shelters are in list
+  ["MEOW Foundation", "Calgary Humane Society", "Cochrane & Area Humane Society"].forEach(s => {
+    if (!shelters.includes(s)) shelters.push(s);
+  });
+  
+  shelterEl.innerHTML = `<option value="all">🏠 All Shelters (${shelters.length} Available)</option>` +
+    shelters.map(s => `<option value="${s}">${s}</option>`).join("");
 }
 
 function setupEventListeners() {
@@ -68,6 +89,15 @@ function setupEventListeners() {
   if (searchEl) {
     searchEl.addEventListener("input", (e) => {
       searchQuery = e.target.value.toLowerCase().trim();
+      render();
+    });
+  }
+
+  // Shelter Select
+  const shelterEl = document.getElementById("shelter-select");
+  if (shelterEl) {
+    shelterEl.addEventListener("change", (e) => {
+      selectedShelter = e.target.value;
       render();
     });
   }
@@ -134,7 +164,6 @@ function toggleLike(catId) {
   localStorage.setItem("bosbos_favorites", JSON.stringify(localFavorites));
   localStorage.setItem("bosbos_community_likes", JSON.stringify(globalLikes));
   
-  // Sync to Firebase if connected
   if (db) {
     db.ref("likes/" + catId).set(globalLikes[catId]);
   }
@@ -194,6 +223,11 @@ function render() {
 
   // 1. Filter
   let filtered = allCats.filter(cat => {
+    // Shelter filter
+    if (selectedShelter !== "all" && cat.shelter !== selectedShelter) {
+      return false;
+    }
+
     // Age check
     if (cat.age_weeks && cat.age_weeks > maxAge) return false;
 
@@ -241,7 +275,7 @@ function render() {
     gridEl.innerHTML = `
       <div class="empty-state">
         <h3>No kittens matching current filters 🐾</h3>
-        <p>Try moving the age slider up or clearing the search bar.</p>
+        <p>Try switching the shelter filter or adjusting the age slider.</p>
       </div>
     `;
     return;

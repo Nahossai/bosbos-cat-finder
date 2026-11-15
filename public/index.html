@@ -14,6 +14,15 @@
 </head>
 <body>
   <div class="container">
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+      <div class="nav-brand">🐾 <strong>Finding Bosbos</strong></div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">🐱 Daily Shortlist</a>
+        <a href="shelters.html" class="nav-link">🏛️ Shelters & Fees Guide</a>
+      </div>
+    </nav>
+
     <!-- Hero Header -->
     <header class="hero">
       <div class="hero-badge">🐾 Calgary Kitten Search • December 2026 Target</div>
@@ -45,6 +54,16 @@
     <section class="controls-card">
       <div class="filter-row">
         <input type="text" id="search-input" class="search-input" placeholder="🔍 Search by kitten name, shelter, breed, or personality..." />
+        
+        <!-- Shelter Filter Dropdown -->
+        <select id="shelter-select" class="shelter-select">
+          <option value="all">🏠 All Shelters</option>
+          <option value="MEOW Foundation">MEOW Foundation</option>
+          <option value="Calgary Humane Society">Calgary Humane Society</option>
+          <option value="Cochrane & Area Humane Society">Cochrane & Area Humane Society</option>
+        </select>
+
+        <!-- Sort Dropdown -->
         <select id="sort-select" class="sort-select">
           <option value="most_liked">🔥 Most Liked by Friends</option>
           <option value="score">🎯 Bosbos Match Score (High to Low)</option>

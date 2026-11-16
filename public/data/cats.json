@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-15T22:03:27.478468",
-  "updated_at_calgary": "Nov 15, 2026, 04:03 PM CST",
+  "updated_at": "2026-11-16T13:40:50.728936",
+  "updated_at_calgary": "Nov 16, 2026, 07:40 AM CST",
   "timezone": "America/Edmonton",
   "total_candidates": 10,
   "target_criteria": {
@@ -30,15 +30,15 @@
       "bosbos_score": 96,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "little",
-        "affectionate",
+        "sweet",
         "loving",
         "gentle",
-        "sweet"
+        "affectionate",
+        "little"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -63,13 +63,13 @@
       "bosbos_score": 92,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "little",
         "playful",
-        "sweet"
+        "sweet",
+        "little"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -94,14 +94,14 @@
       "bosbos_score": 68,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
-        "adorable",
         "playful",
-        "loving"
+        "loving",
+        "adorable",
+        "little"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -126,16 +126,16 @@
       "bosbos_score": 66,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
+        "soft",
         "sweetest",
         "cuddle",
         "playful",
-        "soft",
+        "sweet",
         "gentle"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -162,16 +162,16 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
-        "purring",
         "adorable",
-        "gentle",
         "sweet",
-        "purr"
+        "purr",
+        "gentle",
+        "purring",
+        "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
@@ -200,13 +200,13 @@
       "color_category": "Standard",
       "cute_tags": [
         "loving",
-        "little",
         "adorable",
-        "sweet"
+        "sweet",
+        "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 4
@@ -233,13 +233,13 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
         "soft",
+        "little",
         "purr"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
@@ -264,14 +264,14 @@
       "bosbos_score": 53,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
         "cuddle",
+        "cozy",
         "gentle",
-        "cozy"
+        "little"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -297,8 +297,8 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -324,8 +324,8 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-15T22:03:27.471808",
-      "is_new_today": true,
+      "last_seen": "2026-11-16T13:40:50.713789",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1

@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-17T21:27:52.481836",
-  "updated_at_calgary": "Nov 17, 2026, 03:27 PM CST",
+  "updated_at": "2026-11-18T21:02:19.113618",
+  "updated_at_calgary": "Nov 18, 2026, 03:02 PM CST",
   "timezone": "America/Edmonton",
-  "total_candidates": 7,
+  "total_candidates": 14,
   "target_criteria": {
     "name": "Bosbos",
     "sex": "Female",
@@ -10,6 +10,97 @@
     "preferred_palette": "Bright White, Cream, Colorpoints, Light Calico/Pastel"
   },
   "cats": [
+    {
+      "id": "meow_14736",
+      "name": "West",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "12 weeks",
+      "age_weeks": 12.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14736",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14736",
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14736&seq=2"
+      ],
+      "bio": "*I am in a Foster Home. West is a white kitten with a black tail. Even though she is the littlest kitten in this family, done be fooled, she is the biggest cuddler. Are you a fan of cuddles? Apply today! Littermates: North, South, East",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14736",
+      "bosbos_score": 90,
+      "color_category": "Bright White / Cream / Point",
+      "cute_tags": [
+        "cuddle",
+        "little"
+      ],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 2
+    },
+    {
+      "id": "meow_14734",
+      "name": "South",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "12 weeks",
+      "age_weeks": 12.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14734",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14734",
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14734&seq=2"
+      ],
+      "bio": "*I am in a Foster Home. South is a white kitten with tabby patches. She is energetic and talkative. Do you want a cute ball of energy in your home? Apply today! Littermates: North, East, West",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14734",
+      "bosbos_score": 88,
+      "color_category": "Bright White / Cream / Point",
+      "cute_tags": [
+        "cute"
+      ],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 2
+    },
+    {
+      "id": "meow_14735",
+      "name": "East",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "12 weeks",
+      "age_weeks": 12.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14735",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14735",
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14735&seq=2"
+      ],
+      "bio": "*I am in a Foster Home. East is a white kitten with black spots. She is busy and playful. Do you think you can keep up with her at playtime? Apply today! Littermates: North, South, West",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14735",
+      "bosbos_score": 88,
+      "color_category": "Bright White / Cream / Point",
+      "cute_tags": [
+        "playful"
+      ],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 2
+    },
     {
       "id": "cochrane_mariposa",
       "name": "Mariposa",
@@ -30,14 +121,41 @@
       "bosbos_score": 68,
       "color_category": "Standard",
       "cute_tags": [
-        "playful",
-        "little",
+        "loving",
         "adorable",
-        "loving"
+        "little",
+        "playful"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-17T21:27:52.466398",
+      "last_seen": "2026-11-18T21:02:19.105897",
       "is_new_today": false,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
+    },
+    {
+      "id": "CLGR-A0962412",
+      "name": "Molly",
+      "shelter": "City of Calgary Animal Services",
+      "shelter_location": "2201 Portland Street SE, Calgary, AB",
+      "shelter_phone": "(403) 268-2489",
+      "sex": "Female",
+      "age_str": "9 weeks old",
+      "age_weeks": 9.0,
+      "breed": "Domestic Shorthair mix",
+      "personality": "Available for Adoption",
+      "image_url": "https://24petconnect.com/image/718718202",
+      "images": [
+        "https://24petconnect.com/image/718718202"
+      ],
+      "bio": "My name is Molly.I am a spayed female, torbi Domestic Shorthair mix....",
+      "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0962412",
+      "bosbos_score": 60,
+      "color_category": "Standard",
+      "cute_tags": [],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -62,15 +180,15 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "sweet",
-        "sweetest",
-        "playful",
-        "cuddle",
         "little",
-        "gentle"
+        "playful",
+        "gentle",
+        "cuddle",
+        "sweet",
+        "soft"
       ],
       "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-17T21:27:52.466398",
+      "last_seen": "2026-11-18T21:02:19.105897",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -98,15 +216,15 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "adorable",
-        "sweet",
+        "purr",
         "little",
-        "gentle",
         "purring",
-        "purr"
+        "gentle",
+        "sweet",
+        "adorable"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-17T21:27:52.466398",
+      "last_seen": "2026-11-18T21:02:19.105897",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -135,17 +253,49 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
-        "loving",
-        "little",
         "sweet",
-        "adorable"
+        "adorable",
+        "loving",
+        "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-17T21:27:52.466398",
+      "last_seen": "2026-11-18T21:02:19.105897",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 4
+    },
+    {
+      "id": "meow_14639",
+      "name": "Molly Malone",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "15 weeks",
+      "age_weeks": 15.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14639",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14639"
+      ],
+      "bio": "*I am in a foster home. Molly Malone may be one of the smallest kittens in the litter, but she's certainly not short on curiosity! Just like her famous Irish namesake, this little girl likes to be out and about, seeing what's happening. She's usually the first to check out anything new, and if there's a toy involved, even better! Molly loves to play and is always ready for a little adventure. But she's not all go, go, go. When she's had enough excitement, she's quite happy to climb into your lap and settle in for a cuddle. She's a sweet little mix of curiosity, playfulness and affection, with just enough mischief to keep life interesting! Littermates: Rory McIlroy, Seamus Finnigan, Puca, Fionn McCool, Gracie O'Malley",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14639",
+      "bosbos_score": 58,
+      "color_category": "Standard",
+      "cute_tags": [
+        "cuddle",
+        "sweet",
+        "little",
+        "playful"
+      ],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
     },
     {
       "id": "pmrf-85d9cb48-c9e6-44d4-9e9e-ad5abadaa2fd",
@@ -170,39 +320,100 @@
       "color_category": "Standard",
       "cute_tags": [
         "soft",
-        "little",
-        "purr"
+        "purr",
+        "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-17T21:27:52.466398",
+      "last_seen": "2026-11-18T21:02:19.105897",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
     },
     {
-      "id": "CLGR-A0963248",
-      "name": "Apple Crumble",
-      "shelter": "City of Calgary Animal Services",
-      "shelter_location": "2201 Portland Street SE, Calgary, AB",
-      "shelter_phone": "(403) 268-2489",
+      "id": "meow_14638",
+      "name": "Gracie O'Malley",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
       "sex": "Female",
-      "age_str": "15 weeks old",
+      "age_str": "15 weeks",
       "age_weeks": 15.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14638",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14638"
+      ],
+      "bio": "*I am in a foster home. Named after Ireland's famous Pirate Queen, our little Gracie isn't quite the fearless adventurer you might expect! She's a bit of a chicken, but we prefer to think of her as a careful thinker. Anything new or unusual requires a thorough investigation, and watching her figure things out is absolutely hilarious! When it comes to people, though, Gracie doesn't hesitate. She's a real sweetheart who seeks out human company and loves a comfortable lap. She's also a champion biscuit maker, happily kneading away while soaking up affection. Gracie may not be ready to sail the seven seas, but she's more than ready for a forever home with a comfy lap, plenty of love and a steady supply of biscuits! Littermates: Molly Malone, Rory McIlroy, Seamus Finnigan, Puca, Fionn McCool",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14638",
+      "bosbos_score": 54,
+      "color_category": "Standard",
+      "cute_tags": [
+        "sweet",
+        "little"
+      ],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
+    },
+    {
+      "id": "chs_2000510367",
+      "name": "North Carolina",
+      "shelter": "Calgary Humane Society",
+      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
+      "shelter_phone": "(403) 205-4455",
+      "sex": "Female",
+      "age_str": "3 months",
+      "age_weeks": 13.0,
       "breed": "Domestic Shorthair",
       "personality": "Available for Adoption",
-      "image_url": "https://24petconnect.com/image/718517079",
+      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
       "images": [
-        "https://24petconnect.com/image/718517079"
+        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
       ],
-      "bio": "My name is Apple Crumble.I am a spayed female, black Domestic Shorthair....",
-      "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0963248",
-      "bosbos_score": 50,
+      "bio": "These two sweet southern belles South Caroline and North Carolina bring full-on silliness and charm to your Living room. Fueled with chaos these three are ready to provide life long entertainment and companionship. They will fill your heart with sunshine just like the states they are named after. We do encourage that kittens get adopted together but this is not mandatory and can go home solo if you so choose. They can't wait to meet you!",
+      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000510367",
+      "bosbos_score": 52,
       "color_category": "Standard",
-      "cute_tags": [],
-      "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-17T21:27:52.466398",
-      "is_new_today": false,
+      "cute_tags": [
+        "sweet"
+      ],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
+    },
+    {
+      "id": "chs_2000510365",
+      "name": "South Carolina",
+      "shelter": "Calgary Humane Society",
+      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
+      "shelter_phone": "(403) 205-4455",
+      "sex": "Female",
+      "age_str": "3 months",
+      "age_weeks": 13.0,
+      "breed": "Domestic Shorthair",
+      "personality": "Available for Adoption",
+      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
+      "images": [
+        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
+      ],
+      "bio": "These two sweet southern belles South Caroline and North Carolina bring full-on silliness and charm to your Living room. Fueled with chaos these three are ready to provide life long entertainment and companionship. They will fill your heart with sunshine just like the states they are named after. We do encourage that kittens get adopted together but this is not mandatory and can go home solo if you so choose. They can't wait to meet you!",
+      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000510365",
+      "bosbos_score": 52,
+      "color_category": "Standard",
+      "cute_tags": [
+        "sweet"
+      ],
+      "first_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-18T21:02:19.105897",
+      "is_new_today": true,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -228,7 +439,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-17T21:27:52.466398",
+      "last_seen": "2026-11-18T21:02:19.105897",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,

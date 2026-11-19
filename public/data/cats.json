@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-18T21:02:19.113618",
-  "updated_at_calgary": "Nov 18, 2026, 03:02 PM CST",
+  "updated_at": "2026-11-19T21:06:20.755231",
+  "updated_at_calgary": "Nov 19, 2026, 03:06 PM CST",
   "timezone": "America/Edmonton",
-  "total_candidates": 14,
+  "total_candidates": 13,
   "target_criteria": {
     "name": "Bosbos",
     "sex": "Female",
@@ -17,8 +17,8 @@
       "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
       "shelter_phone": "(403) 230-6033",
       "sex": "Female",
-      "age_str": "12 weeks",
-      "age_weeks": 12.0,
+      "age_str": "13 weeks",
+      "age_weeks": 13.0,
       "breed": "Domestic Shorthair / Rescue Mix",
       "personality": "Kitten",
       "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14736",
@@ -28,15 +28,15 @@
       ],
       "bio": "*I am in a Foster Home. West is a white kitten with a black tail. Even though she is the littlest kitten in this family, done be fooled, she is the biggest cuddler. Are you a fan of cuddles? Apply today! Littermates: North, South, East",
       "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14736",
-      "bosbos_score": 90,
+      "bosbos_score": 84,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "cuddle",
-        "little"
+        "little",
+        "cuddle"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
+      "last_seen": "2026-11-19T21:06:20.708615",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 2
@@ -48,8 +48,8 @@
       "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
       "shelter_phone": "(403) 230-6033",
       "sex": "Female",
-      "age_str": "12 weeks",
-      "age_weeks": 12.0,
+      "age_str": "13 weeks",
+      "age_weeks": 13.0,
       "breed": "Domestic Shorthair / Rescue Mix",
       "personality": "Kitten",
       "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14734",
@@ -59,14 +59,14 @@
       ],
       "bio": "*I am in a Foster Home. South is a white kitten with tabby patches. She is energetic and talkative. Do you want a cute ball of energy in your home? Apply today! Littermates: North, East, West",
       "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14734",
-      "bosbos_score": 88,
+      "bosbos_score": 82,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
         "cute"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
+      "last_seen": "2026-11-19T21:06:20.708615",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 2
@@ -78,8 +78,8 @@
       "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
       "shelter_phone": "(403) 230-6033",
       "sex": "Female",
-      "age_str": "12 weeks",
-      "age_weeks": 12.0,
+      "age_str": "13 weeks",
+      "age_weeks": 13.0,
       "breed": "Domestic Shorthair / Rescue Mix",
       "personality": "Kitten",
       "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14735",
@@ -89,14 +89,14 @@
       ],
       "bio": "*I am in a Foster Home. East is a white kitten with black spots. She is busy and playful. Do you think you can keep up with her at playtime? Apply today! Littermates: North, South, West",
       "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14735",
-      "bosbos_score": 88,
+      "bosbos_score": 82,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
         "playful"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
+      "last_seen": "2026-11-19T21:06:20.708615",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 2
@@ -121,17 +121,83 @@
       "bosbos_score": 68,
       "color_category": "Standard",
       "cute_tags": [
-        "loving",
         "adorable",
         "little",
-        "playful"
+        "playful",
+        "loving"
       ],
       "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-19T21:06:20.708615",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
+    },
+    {
+      "id": "chs_2000496044",
+      "name": "Veronika",
+      "shelter": "Calgary Humane Society",
+      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
+      "shelter_phone": "(403) 205-4455",
+      "sex": "Female",
+      "age_str": "2 months",
+      "age_weeks": 8.7,
+      "breed": "Domestic Shorthair",
+      "personality": "Available for Adoption",
+      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
+      "images": [
+        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
+      ],
+      "bio": "Veronika is a tiny bundle of energy with a big personality! This playful kitten is always on the move, chasing toys, and turning everything into an exciting adventure. She's a nonstop purr machine whenever she sees people, but don't expect her to sit still for long, there's simply too much playing to do! Veronika absolutely loves other cats and would likely thrive in a home with a playful feline companion who can keep up with her enthusiasm.",
+      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000496044",
+      "bosbos_score": 66,
+      "color_category": "Standard",
+      "cute_tags": [
+        "purr",
+        "tiny",
+        "playful"
+      ],
+      "first_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-19T21:06:20.708615",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
+    },
+    {
+      "id": "meow_14780",
+      "name": "Little Mamma",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "12 weeks",
+      "age_weeks": 12.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14780",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14780",
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14780&seq=2"
+      ],
+      "bio": "* I am in a foster home This petite princess is as beautiful as she is sweet. She loves spending her days playing and wrestling with her siblings, and you'll often find her right in the middle of the fun when she's feeling comfortable and secure. While she has a loving heart, she is very shy and will need a patient and understanding family. She can be nervous around people and will often run away if approached too quickly. Building trust with her takes time, but it's well worth the effort. Once she feels safe, her affectionate side begins to shine. She enjoys gentle pets and loves to snuggle up at nap time, especially in a cozy spot where she feels protected. Watching her slowly gain confidence and choose to come closer is incredibly rewarding. This special girl is looking for a calm home with adopters who understand that trust can't be rushed. With patience, kindness, and lots of love, she will continue to blossom into a wonderful companion.  If you have a gentle heart and the patience to let her come to you on her own terms, this lovely little kitten may be the perfect addition to your family. Littermates: Furgus, Stripy, Willard",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14780",
+      "bosbos_score": 66,
+      "color_category": "Standard",
+      "cute_tags": [
+        "cozy",
+        "loving",
+        "little",
+        "sweet",
+        "gentle",
+        "affectionate"
+      ],
+      "first_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-19T21:06:20.708615",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 2
     },
     {
       "id": "CLGR-A0962412",
@@ -144,9 +210,9 @@
       "age_weeks": 9.0,
       "breed": "Domestic Shorthair mix",
       "personality": "Available for Adoption",
-      "image_url": "https://24petconnect.com/image/718718202",
+      "image_url": "https://24petconnect.com/image/718909997",
       "images": [
-        "https://24petconnect.com/image/718718202"
+        "https://24petconnect.com/image/718909997"
       ],
       "bio": "My name is Molly.I am a spayed female, torbi Domestic Shorthair mix....",
       "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0962412",
@@ -154,41 +220,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
-    },
-    {
-      "id": "meow_14648",
-      "name": "Packer",
-      "shelter": "MEOW Foundation",
-      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
-      "shelter_phone": "(403) 230-6033",
-      "sex": "Female",
-      "age_str": "13 weeks",
-      "age_weeks": 13.0,
-      "breed": "Domestic Shorthair / Rescue Mix",
-      "personality": "Kitten",
-      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14648",
-      "images": [
-        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14648"
-      ],
-      "bio": "*I am in a foster home. Meet Packer: a gorgeous little mini-panther who perfectly balances a confident playful spirit with a sweet, gentle side. Packer absolutely loves wand toys and will leap, chase, and stalk them with expert precision. She can usually be found wrestling and tumbling with her siblings. She has a fantastic playful energy and sweet nature. Packer is looking for a patient human who understands there\u2019s a time to cuddle and a time to play and she gets to choose. She isn't a kitty you can force into your lap, but when she decides it is cuddle time, it makes the moment feel incredibly special. Packer will melt your heart with the sweetest, softest meow you have ever heard! If you have a patient heart and are ready to earn the love of a truly special girl, Packer will reward you with her soft meows, choosing-you cuddles, and a lifetime of devotion. Littermates: Little Bit, Radioactive, Binary, Bulldozer",
-      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14648",
-      "bosbos_score": 60,
-      "color_category": "Standard",
-      "cute_tags": [
-        "little",
-        "playful",
-        "gentle",
-        "cuddle",
-        "sweet",
-        "soft"
-      ],
-      "first_seen": "2026-11-15T16:09:31.920920",
-      "last_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-19T21:06:20.708615",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -218,13 +250,13 @@
       "cute_tags": [
         "purr",
         "little",
-        "purring",
-        "gentle",
         "sweet",
-        "adorable"
+        "gentle",
+        "adorable",
+        "purring"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-19T21:06:20.708615",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -253,13 +285,13 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
-        "sweet",
+        "little",
         "adorable",
-        "loving",
-        "little"
+        "sweet",
+        "loving"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-19T21:06:20.708615",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -285,14 +317,14 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
-        "cuddle",
-        "sweet",
         "little",
-        "playful"
+        "playful",
+        "sweet",
+        "cuddle"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
+      "last_seen": "2026-11-19T21:06:20.708615",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -319,12 +351,12 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
-        "soft",
+        "little",
         "purr",
-        "little"
+        "soft"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-19T21:06:20.708615",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -350,70 +382,12 @@
       "bosbos_score": 54,
       "color_category": "Standard",
       "cute_tags": [
-        "sweet",
-        "little"
-      ],
-      "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
-    },
-    {
-      "id": "chs_2000510367",
-      "name": "North Carolina",
-      "shelter": "Calgary Humane Society",
-      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
-      "shelter_phone": "(403) 205-4455",
-      "sex": "Female",
-      "age_str": "3 months",
-      "age_weeks": 13.0,
-      "breed": "Domestic Shorthair",
-      "personality": "Available for Adoption",
-      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
-      "images": [
-        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
-      ],
-      "bio": "These two sweet southern belles South Caroline and North Carolina bring full-on silliness and charm to your Living room. Fueled with chaos these three are ready to provide life long entertainment and companionship. They will fill your heart with sunshine just like the states they are named after. We do encourage that kittens get adopted together but this is not mandatory and can go home solo if you so choose. They can't wait to meet you!",
-      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000510367",
-      "bosbos_score": 52,
-      "color_category": "Standard",
-      "cute_tags": [
+        "little",
         "sweet"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
-    },
-    {
-      "id": "chs_2000510365",
-      "name": "South Carolina",
-      "shelter": "Calgary Humane Society",
-      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
-      "shelter_phone": "(403) 205-4455",
-      "sex": "Female",
-      "age_str": "3 months",
-      "age_weeks": 13.0,
-      "breed": "Domestic Shorthair",
-      "personality": "Available for Adoption",
-      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
-      "images": [
-        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
-      ],
-      "bio": "These two sweet southern belles South Caroline and North Carolina bring full-on silliness and charm to your Living room. Fueled with chaos these three are ready to provide life long entertainment and companionship. They will fill your heart with sunshine just like the states they are named after. We do encourage that kittens get adopted together but this is not mandatory and can go home solo if you so choose. They can't wait to meet you!",
-      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000510365",
-      "bosbos_score": 52,
-      "color_category": "Standard",
-      "cute_tags": [
-        "sweet"
-      ],
-      "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-18T21:02:19.105897",
-      "is_new_today": true,
+      "last_seen": "2026-11-19T21:06:20.708615",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -439,7 +413,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-18T21:02:19.105897",
+      "last_seen": "2026-11-19T21:06:20.708615",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,

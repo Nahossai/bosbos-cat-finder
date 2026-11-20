@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-19T21:06:20.755231",
-  "updated_at_calgary": "Nov 19, 2026, 03:06 PM CST",
+  "updated_at": "2026-11-20T20:52:57.911019",
+  "updated_at_calgary": "Nov 20, 2026, 02:52 PM CST",
   "timezone": "America/Edmonton",
-  "total_candidates": 13,
+  "total_candidates": 12,
   "target_criteria": {
     "name": "Bosbos",
     "sex": "Female",
@@ -35,7 +35,7 @@
         "cuddle"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -65,7 +65,7 @@
         "cute"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -95,43 +95,11 @@
         "playful"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 2
-    },
-    {
-      "id": "cochrane_mariposa",
-      "name": "Mariposa",
-      "shelter": "Cochrane & Area Humane Society",
-      "shelter_location": "Cochrane, AB (West Calgary commuter area)",
-      "shelter_phone": "(403) 932-2072",
-      "sex": "Female",
-      "age_str": "2 Months",
-      "age_weeks": 8.7,
-      "breed": "DMH",
-      "personality": "Available for Adoption",
-      "image_url": "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af795384af4b141fd7fba05_eac35480-b228-449a-a83c-4fe5b4938d39.png",
-      "images": [
-        "https://cdn.prod.website-files.com/6543fd50cfec617b4d70bf35/6af795384af4b141fd7fba05_eac35480-b228-449a-a83c-4fe5b4938d39.png"
-      ],
-      "bio": "Meet Mariposa! Mariposa is an adorable 2-month-old girl with a big personality and a mischievous streak! This playful little troublemaker is often the first to lead her siblings into their next adventure. Whether she's discovering new places to explore or finding creative ways to entertain herself (and occasionally redecorate with paper towels!), Mariposa is always keeping everyone on their toes. She's looking for a fun-loving family who will embrace her playful spirit and provide plenty of toys, enrichment, and love! I may be able to live with other cats and/or dogs. I may be able to live with children. Please email your completed adoption application to adoption@cochranehumane.ca.",
-      "adoption_url": "https://www.cochranehumane.ca/animals/mariposa",
-      "bosbos_score": 68,
-      "color_category": "Standard",
-      "cute_tags": [
-        "adorable",
-        "little",
-        "playful",
-        "loving"
-      ],
-      "first_seen": "2026-11-15T15:20:51.735042",
-      "last_seen": "2026-11-19T21:06:20.708615",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
     },
     {
       "id": "chs_2000496044",
@@ -153,12 +121,43 @@
       "bosbos_score": 66,
       "color_category": "Standard",
       "cute_tags": [
-        "purr",
+        "playful",
         "tiny",
-        "playful"
+        "purr"
       ],
       "first_seen": "2026-11-19T21:06:20.708615",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
+      "is_new_today": false,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
+    },
+    {
+      "id": "chs_2000493814",
+      "name": "Dahlia",
+      "shelter": "Calgary Humane Society",
+      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
+      "shelter_phone": "(403) 205-4455",
+      "sex": "Female",
+      "age_str": "2 months",
+      "age_weeks": 8.7,
+      "breed": "Domestic Shorthair",
+      "personality": "Available for Adoption",
+      "image_url": "https://g.petango.com/photos/1997/7d1dd59c-e37a-4c15-91f2-a29f662fc62f.jpg",
+      "images": [
+        "https://g.petango.com/photos/1997/7d1dd59c-e37a-4c15-91f2-a29f662fc62f.jpg"
+      ],
+      "bio": "Dahlia may be tiny, but her voice is anything but! This adorable little girl has a lot to say, and she wants to make sure everyone hears it! Dahlia is a very vocal kitten who isn't shy about expressing herself. Whether she's looking for company or simply feels like sharing her thoughts with the world, this little chatterbox can turn an ordinary day into a full blown conversation! She especially loves having people around and isn't a big fan of being left alone. With her larger than life voice and endearing personality, Dahlia is sure to keep her future family entertained.",
+      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000493814",
+      "bosbos_score": 66,
+      "color_category": "Standard",
+      "cute_tags": [
+        "little",
+        "adorable",
+        "tiny"
+      ],
+      "first_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": true,
       "status": "active",
       "likes_count": 0,
@@ -185,46 +184,19 @@
       "bosbos_score": 66,
       "color_category": "Standard",
       "cute_tags": [
-        "cozy",
-        "loving",
         "little",
         "sweet",
         "gentle",
-        "affectionate"
+        "snuggle",
+        "cozy",
+        "loving"
       ],
       "first_seen": "2026-11-19T21:06:20.708615",
-      "last_seen": "2026-11-19T21:06:20.708615",
-      "is_new_today": true,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 2
-    },
-    {
-      "id": "CLGR-A0962412",
-      "name": "Molly",
-      "shelter": "City of Calgary Animal Services",
-      "shelter_location": "2201 Portland Street SE, Calgary, AB",
-      "shelter_phone": "(403) 268-2489",
-      "sex": "Female",
-      "age_str": "9 weeks old",
-      "age_weeks": 9.0,
-      "breed": "Domestic Shorthair mix",
-      "personality": "Available for Adoption",
-      "image_url": "https://24petconnect.com/image/718909997",
-      "images": [
-        "https://24petconnect.com/image/718909997"
-      ],
-      "bio": "My name is Molly.I am a spayed female, torbi Domestic Shorthair mix....",
-      "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0962412",
-      "bosbos_score": 60,
-      "color_category": "Standard",
-      "cute_tags": [],
-      "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
-      "photos_count": 1
+      "photos_count": 2
     },
     {
       "id": "cochrane_shorty",
@@ -248,19 +220,53 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "purr",
         "little",
-        "sweet",
-        "gentle",
+        "purring",
+        "purr",
         "adorable",
-        "purring"
+        "sweet",
+        "gentle"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
+    },
+    {
+      "id": "meow_14747",
+      "name": "Cara",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "13 weeks",
+      "age_weeks": 13.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14747",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14747"
+      ],
+      "bio": "*I am in a Foster Home. Meet Cara, one of three tiny triplet sisters! This friendly, curious little girl loves people and starts purring almost as soon as you pick her up. She is petite, playful, and always ready for a game \u2014 and just as ready for her next meal. If you want a kitten who will greet you with purrs and keep you entertained, Cara is your girl. Littermates: Cocoa and Choco",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14747",
+      "bosbos_score": 60,
+      "color_category": "Standard",
+      "cute_tags": [
+        "little",
+        "purring",
+        "purr",
+        "tiny",
+        "playful",
+        "friendly"
+      ],
+      "first_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-20T20:52:57.902123",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
     },
     {
       "id": "cochrane_toffee",
@@ -287,47 +293,15 @@
       "cute_tags": [
         "little",
         "adorable",
-        "sweet",
-        "loving"
+        "loving",
+        "sweet"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 4
-    },
-    {
-      "id": "meow_14639",
-      "name": "Molly Malone",
-      "shelter": "MEOW Foundation",
-      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
-      "shelter_phone": "(403) 230-6033",
-      "sex": "Female",
-      "age_str": "15 weeks",
-      "age_weeks": 15.0,
-      "breed": "Domestic Shorthair / Rescue Mix",
-      "personality": "Kitten",
-      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14639",
-      "images": [
-        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14639"
-      ],
-      "bio": "*I am in a foster home. Molly Malone may be one of the smallest kittens in the litter, but she's certainly not short on curiosity! Just like her famous Irish namesake, this little girl likes to be out and about, seeing what's happening. She's usually the first to check out anything new, and if there's a toy involved, even better! Molly loves to play and is always ready for a little adventure. But she's not all go, go, go. When she's had enough excitement, she's quite happy to climb into your lap and settle in for a cuddle. She's a sweet little mix of curiosity, playfulness and affection, with just enough mischief to keep life interesting! Littermates: Rory McIlroy, Seamus Finnigan, Puca, Fionn McCool, Gracie O'Malley",
-      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14639",
-      "bosbos_score": 58,
-      "color_category": "Standard",
-      "cute_tags": [
-        "little",
-        "playful",
-        "sweet",
-        "cuddle"
-      ],
-      "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-19T21:06:20.708615",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
     },
     {
       "id": "pmrf-85d9cb48-c9e6-44d4-9e9e-ad5abadaa2fd",
@@ -356,38 +330,39 @@
         "soft"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
     },
     {
-      "id": "meow_14638",
-      "name": "Gracie O'Malley",
-      "shelter": "MEOW Foundation",
-      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
-      "shelter_phone": "(403) 230-6033",
+      "id": "chs_2000512579",
+      "name": "Apple Crumble",
+      "shelter": "Calgary Humane Society",
+      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
+      "shelter_phone": "(403) 205-4455",
       "sex": "Female",
-      "age_str": "15 weeks",
-      "age_weeks": 15.0,
-      "breed": "Domestic Shorthair / Rescue Mix",
-      "personality": "Kitten",
-      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14638",
+      "age_str": "3 months",
+      "age_weeks": 13.0,
+      "breed": "Domestic Shorthair",
+      "personality": "Available for Adoption",
+      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
       "images": [
-        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14638"
+        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
       ],
-      "bio": "*I am in a foster home. Named after Ireland's famous Pirate Queen, our little Gracie isn't quite the fearless adventurer you might expect! She's a bit of a chicken, but we prefer to think of her as a careful thinker. Anything new or unusual requires a thorough investigation, and watching her figure things out is absolutely hilarious! When it comes to people, though, Gracie doesn't hesitate. She's a real sweetheart who seeks out human company and loves a comfortable lap. She's also a champion biscuit maker, happily kneading away while soaking up affection. Gracie may not be ready to sail the seven seas, but she's more than ready for a forever home with a comfy lap, plenty of love and a steady supply of biscuits! Littermates: Molly Malone, Rory McIlroy, Seamus Finnigan, Puca, Fionn McCool",
-      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14638",
-      "bosbos_score": 54,
+      "bio": "Apple Crumble may have a sweet name, but this little girl is still learning that the world isn't such a scary place! Found as a stray, Apple Crumble is understandably feeling overwhelmed by her new surroundings. Right now, she prefers the safety of her hiding spot and may hiss or growl when she's frightened. It's simply her way of asking for a little space while she figures things out. At just three months old, Apple Crumble has so much growing and learning ahead of her! She'll need a patient, understanding family who can offer her a quiet environment, safe hiding places, and gentle, positive experiences without rushing her.",
+      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000512579",
+      "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
         "little",
+        "gentle",
         "sweet"
       ],
-      "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-19T21:06:20.708615",
-      "is_new_today": false,
+      "first_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-20T20:52:57.902123",
+      "is_new_today": true,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -413,7 +388,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-19T21:06:20.708615",
+      "last_seen": "2026-11-20T20:52:57.902123",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,

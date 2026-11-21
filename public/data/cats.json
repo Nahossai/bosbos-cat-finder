@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-20T20:52:57.911019",
-  "updated_at_calgary": "Nov 20, 2026, 02:52 PM CST",
+  "updated_at": "2026-11-21T19:53:46.206328",
+  "updated_at_calgary": "Nov 21, 2026, 01:53 PM CST",
   "timezone": "America/Edmonton",
   "total_candidates": 12,
   "target_criteria": {
@@ -35,7 +35,7 @@
         "cuddle"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -65,7 +65,7 @@
         "cute"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -95,73 +95,11 @@
         "playful"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 2
-    },
-    {
-      "id": "chs_2000496044",
-      "name": "Veronika",
-      "shelter": "Calgary Humane Society",
-      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
-      "shelter_phone": "(403) 205-4455",
-      "sex": "Female",
-      "age_str": "2 months",
-      "age_weeks": 8.7,
-      "breed": "Domestic Shorthair",
-      "personality": "Available for Adoption",
-      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
-      "images": [
-        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
-      ],
-      "bio": "Veronika is a tiny bundle of energy with a big personality! This playful kitten is always on the move, chasing toys, and turning everything into an exciting adventure. She's a nonstop purr machine whenever she sees people, but don't expect her to sit still for long, there's simply too much playing to do! Veronika absolutely loves other cats and would likely thrive in a home with a playful feline companion who can keep up with her enthusiasm.",
-      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000496044",
-      "bosbos_score": 66,
-      "color_category": "Standard",
-      "cute_tags": [
-        "playful",
-        "tiny",
-        "purr"
-      ],
-      "first_seen": "2026-11-19T21:06:20.708615",
-      "last_seen": "2026-11-20T20:52:57.902123",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
-    },
-    {
-      "id": "chs_2000493814",
-      "name": "Dahlia",
-      "shelter": "Calgary Humane Society",
-      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
-      "shelter_phone": "(403) 205-4455",
-      "sex": "Female",
-      "age_str": "2 months",
-      "age_weeks": 8.7,
-      "breed": "Domestic Shorthair",
-      "personality": "Available for Adoption",
-      "image_url": "https://g.petango.com/photos/1997/7d1dd59c-e37a-4c15-91f2-a29f662fc62f.jpg",
-      "images": [
-        "https://g.petango.com/photos/1997/7d1dd59c-e37a-4c15-91f2-a29f662fc62f.jpg"
-      ],
-      "bio": "Dahlia may be tiny, but her voice is anything but! This adorable little girl has a lot to say, and she wants to make sure everyone hears it! Dahlia is a very vocal kitten who isn't shy about expressing herself. Whether she's looking for company or simply feels like sharing her thoughts with the world, this little chatterbox can turn an ordinary day into a full blown conversation! She especially loves having people around and isn't a big fan of being left alone. With her larger than life voice and endearing personality, Dahlia is sure to keep her future family entertained.",
-      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000493814",
-      "bosbos_score": 66,
-      "color_category": "Standard",
-      "cute_tags": [
-        "little",
-        "adorable",
-        "tiny"
-      ],
-      "first_seen": "2026-11-20T20:52:57.902123",
-      "last_seen": "2026-11-20T20:52:57.902123",
-      "is_new_today": true,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
     },
     {
       "id": "meow_14780",
@@ -184,15 +122,15 @@
       "bosbos_score": 66,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
-        "sweet",
-        "gentle",
         "snuggle",
+        "gentle",
+        "little",
         "cozy",
+        "sweet",
         "loving"
       ],
       "first_seen": "2026-11-19T21:06:20.708615",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -220,53 +158,19 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
-        "purring",
-        "purr",
         "adorable",
-        "sweet",
-        "gentle"
+        "purr",
+        "purring",
+        "gentle",
+        "little",
+        "sweet"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
-    },
-    {
-      "id": "meow_14747",
-      "name": "Cara",
-      "shelter": "MEOW Foundation",
-      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
-      "shelter_phone": "(403) 230-6033",
-      "sex": "Female",
-      "age_str": "13 weeks",
-      "age_weeks": 13.0,
-      "breed": "Domestic Shorthair / Rescue Mix",
-      "personality": "Kitten",
-      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14747",
-      "images": [
-        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14747"
-      ],
-      "bio": "*I am in a Foster Home. Meet Cara, one of three tiny triplet sisters! This friendly, curious little girl loves people and starts purring almost as soon as you pick her up. She is petite, playful, and always ready for a game \u2014 and just as ready for her next meal. If you want a kitten who will greet you with purrs and keep you entertained, Cara is your girl. Littermates: Cocoa and Choco",
-      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14747",
-      "bosbos_score": 60,
-      "color_category": "Standard",
-      "cute_tags": [
-        "little",
-        "purring",
-        "purr",
-        "tiny",
-        "playful",
-        "friendly"
-      ],
-      "first_seen": "2026-11-20T20:52:57.902123",
-      "last_seen": "2026-11-20T20:52:57.902123",
-      "is_new_today": true,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
     },
     {
       "id": "cochrane_toffee",
@@ -291,13 +195,13 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
+        "loving",
         "little",
         "adorable",
-        "loving",
         "sweet"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -325,12 +229,12 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
+        "soft",
         "little",
-        "purr",
-        "soft"
+        "purr"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -347,25 +251,122 @@
       "age_weeks": 13.0,
       "breed": "Domestic Shorthair",
       "personality": "Available for Adoption",
-      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
+      "image_url": "https://g.petango.com/photos/1997/3d2c03db-18ce-4e63-a0fc-c7119db99832.jpg",
       "images": [
-        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
+        "https://g.petango.com/photos/1997/3d2c03db-18ce-4e63-a0fc-c7119db99832.jpg"
       ],
       "bio": "Apple Crumble may have a sweet name, but this little girl is still learning that the world isn't such a scary place! Found as a stray, Apple Crumble is understandably feeling overwhelmed by her new surroundings. Right now, she prefers the safety of her hiding spot and may hiss or growl when she's frightened. It's simply her way of asking for a little space while she figures things out. At just three months old, Apple Crumble has so much growing and learning ahead of her! She'll need a patient, understanding family who can offer her a quiet environment, safe hiding places, and gentle, positive experiences without rushing her.",
       "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000512579",
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
         "gentle",
+        "little",
         "sweet"
       ],
       "first_seen": "2026-11-20T20:52:57.902123",
-      "last_seen": "2026-11-20T20:52:57.902123",
-      "is_new_today": true,
+      "last_seen": "2026-11-21T19:53:46.193790",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
+    },
+    {
+      "id": "pmrf-d99daf19-0fba-46fd-9681-734736f3e04c",
+      "name": "Churro",
+      "shelter": "Pawsitive Match Rescue Foundation",
+      "shelter_location": "Calgary, AB",
+      "shelter_phone": "(403) 456-5998",
+      "sex": "Female",
+      "age_str": "3 months old (born August 2026)",
+      "age_weeks": 13.0,
+      "breed": "Domestic Short Hair",
+      "personality": "Available for Adoption",
+      "image_url": "https://static.wixstatic.com/media/84bb29_9314bcb60f57473bad5fe921df24d0eb~mv2.jpg",
+      "images": [
+        "https://static.wixstatic.com/media/84bb29_9314bcb60f57473bad5fe921df24d0eb~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_588f297531914f949a446666ec0daeb6~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_491f9cfcb47e43f5b6bba80d67654de5~mv2.jpeg",
+        "https://static.wixstatic.com/media/84bb29_e89821394d4449c4919bdd40399ade6d~mv2.jpeg"
+      ],
+      "bio": "Confidence may be new to Churro, but this sweet, shy kitty is gaining it daily. Preferring to be gently petted when calmness prevails, he\u2019s endlessly curious, especially when his foster mom brings out his favourite toys. He excels at frisking and frolicking about with his fellow felines, is highly food motivated, fully litter box trained, and on the purr-owl for a patient adoptive home, preferably with a confident kitty already there. \n\nChurro was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
+      "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/churro",
+      "bosbos_score": 54,
+      "color_category": "Standard",
+      "cute_tags": [
+        "purr",
+        "sweet"
+      ],
+      "first_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-21T19:53:46.193790",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 4
+    },
+    {
+      "id": "pmrf-70c2cf3a-728c-458f-b58e-d4a3e891049f",
+      "name": "Dulce",
+      "shelter": "Pawsitive Match Rescue Foundation",
+      "shelter_location": "Calgary, AB",
+      "shelter_phone": "(403) 456-5998",
+      "sex": "Female",
+      "age_str": "3 months old (born August 2026)",
+      "age_weeks": 13.0,
+      "breed": "Domestic Short Hair",
+      "personality": "Available for Adoption",
+      "image_url": "https://static.wixstatic.com/media/84bb29_e5b88343d55c442fa7cd0afd9f6cc5f0~mv2.jpg",
+      "images": [
+        "https://static.wixstatic.com/media/84bb29_e5b88343d55c442fa7cd0afd9f6cc5f0~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_49ec49e932bd4df49cc67c56c004eb8b~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_7cc607e18bc24d1ea540797df9c3b1ce~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_d8041738edca46cc85b500cc8c5fb610~mv2.jpeg",
+        "https://static.wixstatic.com/media/84bb29_957086e260874a579429ce6831f5fa72~mv2.jpeg",
+        "https://static.wixstatic.com/media/84bb29_a8a38d1e2af74a0bb3b7d9d4ad8b7109~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_dc60f455955c482283782151c2377279~mv2.jpg"
+      ],
+      "bio": "Description coming soon :)\n\nDulce was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
+      "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/dulce",
+      "bosbos_score": 50,
+      "color_category": "Standard",
+      "cute_tags": [],
+      "first_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-21T19:53:46.193790",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 7
+    },
+    {
+      "id": "pmrf-855b85d2-1ad0-400f-b3ef-2e95aa7256c8",
+      "name": "Guacamole",
+      "shelter": "Pawsitive Match Rescue Foundation",
+      "shelter_location": "Calgary, AB",
+      "shelter_phone": "(403) 456-5998",
+      "sex": "Female",
+      "age_str": "3 months old (born August 2026)",
+      "age_weeks": 13.0,
+      "breed": "Domestic Short Hair",
+      "personality": "Available for Adoption",
+      "image_url": "https://static.wixstatic.com/media/84bb29_6536730775a04097893aa1fb133da58f~mv2.jpg",
+      "images": [
+        "https://static.wixstatic.com/media/84bb29_6536730775a04097893aa1fb133da58f~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_ddb1937ad42a44e6b3a7f1be395084c6~mv2.jpeg",
+        "https://static.wixstatic.com/media/84bb29_78bebb22bec94622b98eeb23777a46d9~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_3c1f1f542581423a928ba252394e421f~mv2.jpeg",
+        "https://static.wixstatic.com/media/84bb29_4d989f6ec4a84352a1684a42c4b2c6e3~mv2.jpg"
+      ],
+      "bio": "Description coming soon :)\n\nGuacamole was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
+      "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/guacamole",
+      "bosbos_score": 50,
+      "color_category": "Standard",
+      "cute_tags": [],
+      "first_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-21T19:53:46.193790",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 5
     },
     {
       "id": "CLGR-A0962487",
@@ -378,9 +379,9 @@
       "age_weeks": 17.3,
       "breed": "Domestic Shorthair mix",
       "personality": "Available for Adoption",
-      "image_url": "https://24petconnect.com/image/718503293",
+      "image_url": "https://24petconnect.com/image/719331933",
       "images": [
-        "https://24petconnect.com/image/718503293"
+        "https://24petconnect.com/image/719331933"
       ],
       "bio": "My name is Eclipse.I am a spayed female, black Domestic Shorthair mix....",
       "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0962487",
@@ -388,7 +389,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-20T20:52:57.902123",
+      "last_seen": "2026-11-21T19:53:46.193790",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,

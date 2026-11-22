@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-21T19:53:46.206328",
-  "updated_at_calgary": "Nov 21, 2026, 01:53 PM CST",
+  "updated_at": "2026-11-22T20:04:27.351648",
+  "updated_at_calgary": "Nov 22, 2026, 02:04 PM CST",
   "timezone": "America/Edmonton",
-  "total_candidates": 12,
+  "total_candidates": 11,
   "target_criteria": {
     "name": "Bosbos",
     "sex": "Female",
@@ -31,11 +31,11 @@
       "bosbos_score": 84,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "little",
-        "cuddle"
+        "cuddle",
+        "little"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -65,7 +65,7 @@
         "cute"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -95,42 +95,7 @@
         "playful"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-21T19:53:46.193790",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 2
-    },
-    {
-      "id": "meow_14780",
-      "name": "Little Mamma",
-      "shelter": "MEOW Foundation",
-      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
-      "shelter_phone": "(403) 230-6033",
-      "sex": "Female",
-      "age_str": "12 weeks",
-      "age_weeks": 12.0,
-      "breed": "Domestic Shorthair / Rescue Mix",
-      "personality": "Kitten",
-      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14780",
-      "images": [
-        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14780",
-        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14780&seq=2"
-      ],
-      "bio": "* I am in a foster home This petite princess is as beautiful as she is sweet. She loves spending her days playing and wrestling with her siblings, and you'll often find her right in the middle of the fun when she's feeling comfortable and secure. While she has a loving heart, she is very shy and will need a patient and understanding family. She can be nervous around people and will often run away if approached too quickly. Building trust with her takes time, but it's well worth the effort. Once she feels safe, her affectionate side begins to shine. She enjoys gentle pets and loves to snuggle up at nap time, especially in a cozy spot where she feels protected. Watching her slowly gain confidence and choose to come closer is incredibly rewarding. This special girl is looking for a calm home with adopters who understand that trust can't be rushed. With patience, kindness, and lots of love, she will continue to blossom into a wonderful companion.  If you have a gentle heart and the patience to let her come to you on her own terms, this lovely little kitten may be the perfect addition to your family. Littermates: Furgus, Stripy, Willard",
-      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14780",
-      "bosbos_score": 66,
-      "color_category": "Standard",
-      "cute_tags": [
-        "snuggle",
-        "gentle",
-        "little",
-        "cozy",
-        "sweet",
-        "loving"
-      ],
-      "first_seen": "2026-11-19T21:06:20.708615",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -158,15 +123,15 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "adorable",
         "purr",
-        "purring",
-        "gentle",
         "little",
+        "gentle",
+        "purring",
+        "adorable",
         "sweet"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -195,13 +160,13 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
-        "loving",
-        "little",
         "adorable",
-        "sweet"
+        "loving",
+        "sweet",
+        "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -230,11 +195,11 @@
       "color_category": "Standard",
       "cute_tags": [
         "soft",
-        "little",
-        "purr"
+        "purr",
+        "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -260,12 +225,12 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
+        "sweet",
         "gentle",
-        "little",
-        "sweet"
+        "little"
       ],
       "first_seen": "2026-11-20T20:52:57.902123",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -298,8 +263,8 @@
         "sweet"
       ],
       "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-21T19:53:46.193790",
-      "is_new_today": true,
+      "last_seen": "2026-11-22T20:04:27.344494",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 4
@@ -331,8 +296,8 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-21T19:53:46.193790",
-      "is_new_today": true,
+      "last_seen": "2026-11-22T20:04:27.344494",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 7
@@ -362,8 +327,8 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-21T19:53:46.193790",
-      "is_new_today": true,
+      "last_seen": "2026-11-22T20:04:27.344494",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 5
@@ -379,9 +344,9 @@
       "age_weeks": 17.3,
       "breed": "Domestic Shorthair mix",
       "personality": "Available for Adoption",
-      "image_url": "https://24petconnect.com/image/719331933",
+      "image_url": "https://24petconnect.com/image/719382744",
       "images": [
-        "https://24petconnect.com/image/719331933"
+        "https://24petconnect.com/image/719382744"
       ],
       "bio": "My name is Eclipse.I am a spayed female, black Domestic Shorthair mix....",
       "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0962487",
@@ -389,7 +354,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-22T20:04:27.344494",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,

@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-24T22:51:50.583954",
-  "updated_at_calgary": "Nov 24, 2026, 04:51 PM CST",
+  "updated_at": "2026-11-25T22:04:46.628999",
+  "updated_at_calgary": "Nov 25, 2026, 04:04 PM CST",
   "timezone": "America/Edmonton",
-  "total_candidates": 13,
+  "total_candidates": 11,
   "target_criteria": {
     "name": "Bosbos",
     "sex": "Female",
@@ -21,9 +21,9 @@
       "age_weeks": 11.0,
       "breed": "Domestic Shorthair mix",
       "personality": "Available for Adoption",
-      "image_url": "https://24petconnect.com/image/719917660",
+      "image_url": "https://24petconnect.com/image/720059360",
       "images": [
-        "https://24petconnect.com/image/719917660"
+        "https://24petconnect.com/image/720059360"
       ],
       "bio": "My name is Rachel (White).I am a spayed female, black and white Domestic Shorthair mix....",
       "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0961784",
@@ -31,8 +31,8 @@
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [],
       "first_seen": "2026-11-24T00:30:31.605858",
-      "last_seen": "2026-11-24T22:51:50.576748",
-      "is_new_today": true,
+      "last_seen": "2026-11-25T22:04:46.621090",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
@@ -62,7 +62,7 @@
         "cuddle"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -92,7 +92,7 @@
         "cute"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -122,44 +122,11 @@
         "playful"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 2
-    },
-    {
-      "id": "chs_2000498209",
-      "name": "Chess",
-      "shelter": "Calgary Humane Society",
-      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
-      "shelter_phone": "(403) 205-4455",
-      "sex": "Female",
-      "age_str": "2 months",
-      "age_weeks": 8.7,
-      "breed": "Domestic Shorthair",
-      "personality": "Available for Adoption",
-      "image_url": "https://g.petango.com/shared/Photo-Not-Available-cat.gif",
-      "images": [
-        "https://g.petango.com/shared/Photo-Not-Available-cat.gif"
-      ],
-      "bio": "Ready to make your move? Meet Checkers and Chess, an adorable 2-month-old brother-and-sister duo! Rescued as strays, these two little cuties have traded street life for zoomies, pounces, and purrs. Checkers and Chess are super playful, endlessly sweet, and ready to bring all of the fun to their new forever home.",
-      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000498209",
-      "bosbos_score": 70,
-      "color_category": "Standard",
-      "cute_tags": [
-        "adorable",
-        "sweet",
-        "little",
-        "purr",
-        "playful"
-      ],
-      "first_seen": "2026-11-24T22:51:50.576748",
-      "last_seen": "2026-11-24T22:51:50.576748",
-      "is_new_today": true,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
     },
     {
       "id": "cochrane_shorty",
@@ -183,15 +150,15 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "gentle",
-        "adorable",
-        "purring",
         "sweet",
+        "purr",
+        "purring",
+        "gentle",
         "little",
-        "purr"
+        "adorable"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -220,13 +187,13 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
-        "adorable",
-        "loving",
         "sweet",
-        "little"
+        "little",
+        "adorable",
+        "loving"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -254,12 +221,12 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
-        "soft",
+        "little",
         "purr",
-        "little"
+        "soft"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -285,12 +252,12 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
-        "gentle",
         "sweet",
-        "little"
+        "little",
+        "gentle"
       ],
       "first_seen": "2026-11-20T20:52:57.902123",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -319,12 +286,12 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
+        "sweet",
         "purr",
-        "playful",
-        "sweet"
+        "playful"
       ],
       "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -357,7 +324,7 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -388,38 +355,11 @@
       "color_category": "Standard",
       "cute_tags": [],
       "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-24T22:51:50.576748",
+      "last_seen": "2026-11-25T22:04:46.621090",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 5
-    },
-    {
-      "id": "CLGR-A0962487",
-      "name": "Eclipse",
-      "shelter": "City of Calgary Animal Services",
-      "shelter_location": "2201 Portland Street SE, Calgary, AB",
-      "shelter_phone": "(403) 268-2489",
-      "sex": "Female",
-      "age_str": "4 months old",
-      "age_weeks": 17.3,
-      "breed": "Domestic Shorthair mix",
-      "personality": "Available for Adoption",
-      "image_url": "https://24petconnect.com/image/719910604",
-      "images": [
-        "https://24petconnect.com/image/719910604"
-      ],
-      "bio": "My name is Eclipse.I am a spayed female, black Domestic Shorthair mix....",
-      "adoption_url": "https://24petconnect.com/DetailsMain/CLGR/A0962487",
-      "bosbos_score": 45,
-      "color_category": "Standard",
-      "cute_tags": [],
-      "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-24T22:51:50.576748",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 1
     }
   ]
 }

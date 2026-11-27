@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-26T22:03:07.943217",
-  "updated_at_calgary": "Nov 26, 2026, 04:03 PM CST",
+  "updated_at": "2026-11-27T21:45:20.345845",
+  "updated_at_calgary": "Nov 27, 2026, 03:45 PM CST",
   "timezone": "America/Edmonton",
-  "total_candidates": 12,
+  "total_candidates": 13,
   "target_criteria": {
     "name": "Bosbos",
     "sex": "Female",
@@ -32,14 +32,14 @@
       "bosbos_score": 98,
       "color_category": "Bright White / Cream / Point",
       "cute_tags": [
-        "little",
         "adorable",
+        "gentle",
         "sweet",
-        "gentle"
+        "little"
       ],
       "first_seen": "2026-11-26T22:03:07.933854",
-      "last_seen": "2026-11-26T22:03:07.933854",
-      "is_new_today": true,
+      "last_seen": "2026-11-27T21:45:20.332289",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
@@ -65,19 +65,87 @@
       "bosbos_score": 90,
       "color_category": "Pastel / Calico / Light Mix",
       "cute_tags": [
-        "adorable",
-        "little",
         "gentle",
-        "cozy",
+        "sweetest",
+        "adorable",
         "sweet",
-        "sweetest"
+        "cozy",
+        "little"
       ],
       "first_seen": "2026-11-26T22:03:07.933854",
-      "last_seen": "2026-11-26T22:03:07.933854",
-      "is_new_today": true,
+      "last_seen": "2026-11-27T21:45:20.332289",
+      "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 2
+    },
+    {
+      "id": "meow_14801",
+      "name": "Snowflake",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "14 weeks",
+      "age_weeks": 14.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14801",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14801"
+      ],
+      "bio": "*I am in a foster home. Meet Snowflake: The Little Snowflake Who Needs Time to Melt Female | Black shorthair | Professional heart-melter Who says snowflakes have to be white? This little Snowflake is dressed entirely in black, with the softest, most luxurious short fur and enormous round golden-yellow eyes that could melt even the iciest heart. And her personality? Somehow even softer than her fur. Snowflake is the sweetest, gentlest little soul. When a new kitten joined her foster family, she welcomed him and his initial out-of-fear aggression with remarkable patience and kindness, even though she's still learning to be brave around humans herself. Not a hiss, not a fuss, just quiet acceptance and the sort of generosity that makes you wish more people were like cats. Snowflake is a shy little lady. Her first instinct when approached is often to run away, but don't mistake her caution for a lack of affection. She's simply a tender heart who needs time to learn that humans can be trusted. Watching her foster sister happily purr away in someone's arms has been her best lesson in human appreciation. Apparently, purring is contagious! And if you happen to arrive bearing a tube treat? Well, negotiations may proceed considerably faster. Snowflake isn't the kitten who will throw herself into your arms on day one. She's the kitten who will make you earn her trust, one gentle moment at a time. And when she finally chooses you, you'll know you've been given something truly special. Looking for someone with a patient heart, a gentle touch, and a generous supply of tube treats. Her love may take time to blossom, but the sweetest things are always worth waiting for. Littermates: Sugar Pie, Sleighbell",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14801",
+      "bosbos_score": 90,
+      "color_category": "Bright White / Cream / Point",
+      "cute_tags": [
+        "gentle",
+        "sweetest",
+        "sweet",
+        "purring",
+        "little",
+        "soft"
+      ],
+      "first_seen": "2026-11-27T21:45:20.332289",
+      "last_seen": "2026-11-27T21:45:20.332289",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
+    },
+    {
+      "id": "meow_14811",
+      "name": "Sugar Pie",
+      "shelter": "MEOW Foundation",
+      "shelter_location": "Calgary, AB (35 Skyline Cres NE)",
+      "shelter_phone": "(403) 230-6033",
+      "sex": "Female",
+      "age_str": "14 weeks",
+      "age_weeks": 14.0,
+      "breed": "Domestic Shorthair / Rescue Mix",
+      "personality": "Kitten",
+      "image_url": "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14811",
+      "images": [
+        "https://can01e.sheltermanager.com/service?account=mf2728&method=animal_image&animalid=14811"
+      ],
+      "bio": "*I am in a foster home. Meet Sugar Pie: Sweet as Sugar, Twice as Spicy! Female | Grey-and-white tabby | Chief Executive of Cuteness Some kittens need time to come out of their shells. Sugar Pie would like to know what shell you're talking about and whether there are treats inside. This ridiculously adorable grey-and-white tabby girl is exactly as sweet as her name suggests, but don't let all that sugar fool you. She's got confidence to spare, personality for days, and absolutely no intention of hiding her fabulous self from the world. Sugar Pie approaches life with the cheerful certainty that everything is wonderful, everyone is a potential friend, and every interesting situation deserves her immediate involvement. She's cute, she knows it, and frankly, she's not wrong. Her greatest weakness? Temptations. The crunchy little treats, that is, although we suspect she's responsible for quite a few temptations herself. Open a bag and you've got her undivided attention. Whether that attention lasts after the treats are gone is between you and Sugarpie. She's the perfect little combination of sweetness, confidence, and playful charm. No complicated introductions, no elaborate courtship. Sugarpie is ready to make herself right at home and bring a generous helping of joy to your everyday life. Warning: May cause excessive smiling, spontaneous baby talk, and an inexplicable increase in your Temptations budget. Sugar Pie is ready to sweeten your life. Are you ready for a little extra sugar? Littermates: Snowflake, Sleighbell",
+      "adoption_url": "https://meowfoundation.com/adoptable-cats/#cat-14811",
+      "bosbos_score": 90,
+      "color_category": "Bright White / Cream / Point",
+      "cute_tags": [
+        "adorable",
+        "sweet",
+        "cute",
+        "playful",
+        "little",
+        "baby"
+      ],
+      "first_seen": "2026-11-27T21:45:20.332289",
+      "last_seen": "2026-11-27T21:45:20.332289",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 1
     },
     {
       "id": "meow_14736",
@@ -104,7 +172,7 @@
         "cuddle"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-26T22:03:07.933854",
+      "last_seen": "2026-11-27T21:45:20.332289",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -134,7 +202,7 @@
         "cute"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-26T22:03:07.933854",
+      "last_seen": "2026-11-27T21:45:20.332289",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -164,7 +232,7 @@
         "playful"
       ],
       "first_seen": "2026-11-18T21:02:19.105897",
-      "last_seen": "2026-11-26T22:03:07.933854",
+      "last_seen": "2026-11-27T21:45:20.332289",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
@@ -192,19 +260,59 @@
       "bosbos_score": 60,
       "color_category": "Standard",
       "cute_tags": [
-        "adorable",
-        "little",
-        "purr",
         "gentle",
+        "adorable",
         "sweet",
-        "purring"
+        "purring",
+        "little",
+        "purr"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-26T22:03:07.933854",
+      "last_seen": "2026-11-27T21:45:20.332289",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 3
+    },
+    {
+      "id": "pmrf-70c2cf3a-728c-458f-b58e-d4a3e891049f",
+      "name": "Dulce",
+      "shelter": "Pawsitive Match Rescue Foundation",
+      "shelter_location": "Calgary, AB",
+      "shelter_phone": "(403) 456-5998",
+      "sex": "Female",
+      "age_str": "3 months old (born August 2026)",
+      "age_weeks": 13.0,
+      "breed": "Domestic Short Hair",
+      "personality": "Available for Adoption",
+      "image_url": "https://static.wixstatic.com/media/84bb29_e5b88343d55c442fa7cd0afd9f6cc5f0~mv2.jpg",
+      "images": [
+        "https://static.wixstatic.com/media/84bb29_e5b88343d55c442fa7cd0afd9f6cc5f0~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_49ec49e932bd4df49cc67c56c004eb8b~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_7cc607e18bc24d1ea540797df9c3b1ce~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_d8041738edca46cc85b500cc8c5fb610~mv2.jpeg",
+        "https://static.wixstatic.com/media/84bb29_957086e260874a579429ce6831f5fa72~mv2.jpeg",
+        "https://static.wixstatic.com/media/84bb29_a8a38d1e2af74a0bb3b7d9d4ad8b7109~mv2.jpg",
+        "https://static.wixstatic.com/media/84bb29_dc60f455955c482283782151c2377279~mv2.jpg",
+        "https://static.wixstatic.com/media/5218b6_6537efb19edc447296ec0226f0e84412~mv2.jpg"
+      ],
+      "bio": "Dearest little Dulce is as sweet as her name! Growing more confident daily, she\u2019s actively seeking out pets from her foster mom and purr, purr, purring away. Perpetually playful, she enjoys engaging with her equally sweet siblings, playing with toys and then relaxing by looking out the window. A hearty eater and fully litter box trained, Dulce will delight any calm and patient adoptive home, preferably with one of her purr-ecious sibs.\n\nDulce was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
+      "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/dulce",
+      "bosbos_score": 60,
+      "color_category": "Standard",
+      "cute_tags": [
+        "sweet",
+        "purring",
+        "playful",
+        "little",
+        "purr"
+      ],
+      "first_seen": "2026-11-21T19:53:46.193790",
+      "last_seen": "2026-11-27T21:45:20.332289",
+      "is_new_today": false,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 8
     },
     {
       "id": "cochrane_toffee",
@@ -229,50 +337,17 @@
       "bosbos_score": 58,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
+        "loving",
         "adorable",
         "sweet",
-        "loving"
+        "little"
       ],
       "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-26T22:03:07.933854",
+      "last_seen": "2026-11-27T21:45:20.332289",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 4
-    },
-    {
-      "id": "pmrf-85d9cb48-c9e6-44d4-9e9e-ad5abadaa2fd",
-      "name": "Pepper",
-      "shelter": "Pawsitive Match Rescue Foundation",
-      "shelter_location": "Calgary, AB",
-      "shelter_phone": "(403) 456-5998",
-      "sex": "Female",
-      "age_str": "3 months old (born August 2026)",
-      "age_weeks": 13.0,
-      "breed": "Domestic Short Hair",
-      "personality": "Available for Adoption",
-      "image_url": "https://static.wixstatic.com/media/b0bcb0_c1e41aae7af5428ca7b3bb0f63d6f219~mv2.jpeg",
-      "images": [
-        "https://static.wixstatic.com/media/b0bcb0_c1e41aae7af5428ca7b3bb0f63d6f219~mv2.jpeg",
-        "https://static.wixstatic.com/media/b0bcb0_85e7a9250a744891974d599f6046314b~mv2.jpeg",
-        "https://static.wixstatic.com/media/b0bcb0_72a8539eef754ff688e3c3378ab80c84~mv2.jpeg"
-      ],
-      "bio": "Peppy little Pepper is the softest and fuzziest of felines. Despite still being easily startled, she loves being held and petted by her foster mom and falling asleep on her lap. Known for her purr, she also loves playing with toys, chasing her sisters through the cat tunnel and exploring her environment. Highly food motivated and fully litter box trained, Pepper will perk up any adoring adoptive home. Purr-haps yours?\n\nPepper was born approximately August 2026.",
-      "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/pepper",
-      "bosbos_score": 56,
-      "color_category": "Standard",
-      "cute_tags": [
-        "little",
-        "soft",
-        "purr"
-      ],
-      "first_seen": "2026-11-15T20:51:21.054219",
-      "last_seen": "2026-11-26T22:03:07.933854",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 3
     },
     {
       "id": "chs_2000512579",
@@ -294,83 +369,16 @@
       "bosbos_score": 56,
       "color_category": "Standard",
       "cute_tags": [
-        "little",
+        "gentle",
         "sweet",
-        "gentle"
+        "little"
       ],
       "first_seen": "2026-11-20T20:52:57.902123",
-      "last_seen": "2026-11-26T22:03:07.933854",
+      "last_seen": "2026-11-27T21:45:20.332289",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
       "photos_count": 1
-    },
-    {
-      "id": "pmrf-d99daf19-0fba-46fd-9681-734736f3e04c",
-      "name": "Churro",
-      "shelter": "Pawsitive Match Rescue Foundation",
-      "shelter_location": "Calgary, AB",
-      "shelter_phone": "(403) 456-5998",
-      "sex": "Female",
-      "age_str": "3 months old (born August 2026)",
-      "age_weeks": 13.0,
-      "breed": "Domestic Short Hair",
-      "personality": "Available for Adoption",
-      "image_url": "https://static.wixstatic.com/media/84bb29_9314bcb60f57473bad5fe921df24d0eb~mv2.jpg",
-      "images": [
-        "https://static.wixstatic.com/media/84bb29_9314bcb60f57473bad5fe921df24d0eb~mv2.jpg",
-        "https://static.wixstatic.com/media/84bb29_588f297531914f949a446666ec0daeb6~mv2.jpg",
-        "https://static.wixstatic.com/media/84bb29_491f9cfcb47e43f5b6bba80d67654de5~mv2.jpeg",
-        "https://static.wixstatic.com/media/84bb29_e89821394d4449c4919bdd40399ade6d~mv2.jpeg"
-      ],
-      "bio": "Churro is gaining in confidence daily. Sweet yet still shy, he\u2019s ever so playful, particularly when his foster mom brings out his favourite toys, even staying longer now for pets. Endlessly curious, he excels at frisking and frolicking about with his equally sweet siblings, is highly food motivated and on the purr-owl for a calm and patient fur-ever home, preferably with one of his littermates. \n\nChurro was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
-      "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/churro",
-      "bosbos_score": 56,
-      "color_category": "Standard",
-      "cute_tags": [
-        "sweet",
-        "playful",
-        "purr"
-      ],
-      "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-26T22:03:07.933854",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 4
-    },
-    {
-      "id": "pmrf-70c2cf3a-728c-458f-b58e-d4a3e891049f",
-      "name": "Dulce",
-      "shelter": "Pawsitive Match Rescue Foundation",
-      "shelter_location": "Calgary, AB",
-      "shelter_phone": "(403) 456-5998",
-      "sex": "Female",
-      "age_str": "3 months old (born August 2026)",
-      "age_weeks": 13.0,
-      "breed": "Domestic Short Hair",
-      "personality": "Available for Adoption",
-      "image_url": "https://static.wixstatic.com/media/84bb29_e5b88343d55c442fa7cd0afd9f6cc5f0~mv2.jpg",
-      "images": [
-        "https://static.wixstatic.com/media/84bb29_e5b88343d55c442fa7cd0afd9f6cc5f0~mv2.jpg",
-        "https://static.wixstatic.com/media/84bb29_49ec49e932bd4df49cc67c56c004eb8b~mv2.jpg",
-        "https://static.wixstatic.com/media/84bb29_7cc607e18bc24d1ea540797df9c3b1ce~mv2.jpg",
-        "https://static.wixstatic.com/media/84bb29_d8041738edca46cc85b500cc8c5fb610~mv2.jpeg",
-        "https://static.wixstatic.com/media/84bb29_957086e260874a579429ce6831f5fa72~mv2.jpeg",
-        "https://static.wixstatic.com/media/84bb29_a8a38d1e2af74a0bb3b7d9d4ad8b7109~mv2.jpg",
-        "https://static.wixstatic.com/media/84bb29_dc60f455955c482283782151c2377279~mv2.jpg"
-      ],
-      "bio": "Description coming soon :)\n\nDulce was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
-      "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/dulce",
-      "bosbos_score": 50,
-      "color_category": "Standard",
-      "cute_tags": [],
-      "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-26T22:03:07.933854",
-      "is_new_today": false,
-      "status": "active",
-      "likes_count": 0,
-      "photos_count": 7
     },
     {
       "id": "pmrf-855b85d2-1ad0-400f-b3ef-2e95aa7256c8",
@@ -389,19 +397,54 @@
         "https://static.wixstatic.com/media/84bb29_ddb1937ad42a44e6b3a7f1be395084c6~mv2.jpeg",
         "https://static.wixstatic.com/media/84bb29_78bebb22bec94622b98eeb23777a46d9~mv2.jpg",
         "https://static.wixstatic.com/media/84bb29_3c1f1f542581423a928ba252394e421f~mv2.jpeg",
-        "https://static.wixstatic.com/media/84bb29_4d989f6ec4a84352a1684a42c4b2c6e3~mv2.jpg"
+        "https://static.wixstatic.com/media/84bb29_4d989f6ec4a84352a1684a42c4b2c6e3~mv2.jpg",
+        "https://static.wixstatic.com/media/5218b6_a12c87b3bafe4159a326fcd0b7c2ebb5~mv2.jpg"
       ],
-      "bio": "Description coming soon :)\n\nGuacamole was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
+      "bio": "Give gentle Guacamole time and his sweetness shines through. Still skittish, however, where new people are concerned, he\u2019s following his siblings\u2019 example and learning to trust his foster mom more. Although he\u2019ll accept pets from her, he\u2019s not yet a lap cat, but he does enjoy looking out the window and playing with toys. Highly food motivated and litter box trained, Guacamole will grow into the Guacamole he was meant to be in a patient home, preferably with one of his sweet siblings.\n\nGuacamole was born approximately August 2026. She is currently on-preview and will be available for adoption soon.",
       "adoption_url": "https://www.pawsitivematch.org/adoptable-cats-item/guacamole",
-      "bosbos_score": 50,
+      "bosbos_score": 54,
       "color_category": "Standard",
-      "cute_tags": [],
+      "cute_tags": [
+        "gentle",
+        "sweet"
+      ],
       "first_seen": "2026-11-21T19:53:46.193790",
-      "last_seen": "2026-11-26T22:03:07.933854",
+      "last_seen": "2026-11-27T21:45:20.332289",
       "is_new_today": false,
       "status": "active",
       "likes_count": 0,
-      "photos_count": 5
+      "photos_count": 6
+    },
+    {
+      "id": "chs_2000512307",
+      "name": "Nanner",
+      "shelter": "Calgary Humane Society",
+      "shelter_location": "Calgary, AB (4455 110 Ave SE)",
+      "shelter_phone": "(403) 205-4455",
+      "sex": "Female",
+      "age_str": "3 months",
+      "age_weeks": 13.0,
+      "breed": "Domestic Shorthair",
+      "personality": "Available for Adoption",
+      "image_url": "https://g.petango.com/photos/1997/5a464be1-80fe-42e5-951c-a243bdd5f1f2.jpg",
+      "images": [
+        "https://g.petango.com/photos/1997/5a464be1-80fe-42e5-951c-a243bdd5f1f2.jpg",
+        "https://g.petango.com/photos/1997/82684af6-c348-4cb7-a8f2-a3b546ce7d03.jpg"
+      ],
+      "bio": "Meet Nanner - the tiny bundle of love and energy that will keep you entertained and on your feet! This little one came in with a group and has had a good time romping around with her siblings, buy is now looking to step out and find her forever home! Kittens need a lot of exercise, mental stimulation, attention and affection and lots of playtime in between their naps! Come see Nanner and find out if she is your new fuzzy family member!",
+      "adoption_url": "https://www.calgaryhumane.ca/adopt/cats/?id=2000512307",
+      "bosbos_score": 54,
+      "color_category": "Standard",
+      "cute_tags": [
+        "tiny",
+        "little"
+      ],
+      "first_seen": "2026-11-27T21:45:20.332289",
+      "last_seen": "2026-11-27T21:45:20.332289",
+      "is_new_today": true,
+      "status": "active",
+      "likes_count": 0,
+      "photos_count": 2
     }
   ]
 }
